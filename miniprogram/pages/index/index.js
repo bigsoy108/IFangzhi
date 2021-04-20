@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    keyword:""
   },
 
   /**
@@ -68,24 +68,14 @@ Page({
     //执行点击事件
     formSubmit: function (e) {
 
-      //声明当天执行的
-      var that = this;
   
       //获取表单所有name=keyword的值
-      var formData = e.detail.value.keyword;
+      this.setData({
+        keyword:e.detail.value.keyword
+      })
 
       wx.navigateTo({
-        url: '/pages/results/results',
-        events: {
-          // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-          test: function(data) {
-            console.log(data)
-          }
-        },
-        success: function(res) {
-          // 通过eventChannel向被打开页面传送数据
-          res.eventChannel.emit('test', { data: formData })
-        }
+        url: '/pages/results/results?kw='+this.data.keyword
       })
   
       //显示搜索中的提示

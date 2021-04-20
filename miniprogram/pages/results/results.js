@@ -17,27 +17,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const eventChannel = this.getOpenerEventChannel()
-    var it = ""
-    // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
-    eventChannel.on('test', function(data) {
-      it = data.data
-    })
     this.setData({
-      kw:it
+      kw:options.kw
     })
     console.log(this.data.kw)
 
     db.collection("TANG").where(_.or([
       {
         now:({
-          $regex:'.*' + it + '.*',
+          $regex:'.*' + this.data.kw + '.*',
           $options: 'i'
         }) 
       },
       {
         old:({
-          $regex:'.*' + it + '.*',
+          $regex:'.*' + this.data.kw + '.*',
           $options: 'i'
         })
       }
