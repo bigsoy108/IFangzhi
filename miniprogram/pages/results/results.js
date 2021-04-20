@@ -1,6 +1,7 @@
 // pages/results/results.js
 
 const db = wx.cloud.database()
+const _ = db.command
 
 Page({
 
@@ -8,7 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    results:[]
+    results:[],
+    kw:""
   },
 
   /**
@@ -16,15 +18,30 @@ Page({
    */
   onLoad: function (options) {
     const eventChannel = this.getOpenerEventChannel()
-    var kw = ""
+    var it = ""
     // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
     eventChannel.on('test', function(data) {
-      kw = data.data
+      it = data.data
     })
-    console.log(this.data.results)
-    db.collection("Tang").where({
-      loc:kw
-    }).get({
+    this.setData({
+      kw:it
+    })
+    console.log(this.data.kw)
+
+    db.collection("TANG").where(_.or([
+      {
+        now:({
+          $regex:'.*' + it + '.*',
+          $options: 'i'
+        }) 
+      },
+      {
+        old:({
+          $regex:'.*' + it + '.*',
+          $options: 'i'
+        })
+      }
+    ])).get({
       success:res=>{
         console.log(res)
         this.setData({
