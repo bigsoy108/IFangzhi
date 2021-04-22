@@ -1,0 +1,30 @@
+/* pages/main_page/main_page.wxss */
+page{
+  height: 100%;
+}
+
+.title{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 14px;
+  font-weight:bold;
+  height: 20%;
+}
+
+.main{
+  
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;  
+  text-align: center；
+}
+
+.button{
+  margin-top: 30px;
+  width: 100%;
+  height: 45px;
+  background: #56b273;
+  color: #fff;
+  border-radius: 100px;
+}
