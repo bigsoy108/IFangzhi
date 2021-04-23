@@ -28,3 +28,7 @@ page{
   color: #fff;
   border-radius: 100px;
 }
+.img{
+  width:10vw;
+  height:5vh;
+}
