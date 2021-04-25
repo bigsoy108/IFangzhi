@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<view wx:for="{{ne}}">
+
+  <view>{{item.old}}</view>
+  <view>{{item.now}}</view>
+  <view>{{item.info}}</view>
+</view>
+
+

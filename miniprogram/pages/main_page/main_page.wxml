@@ -11,8 +11,10 @@
     <button  bindtap="select_l" type="primary" class="button">小程序搜索</button>
 
     <button  bindtap="select_r" type="primary" class="button">地名大纲</button>
+    
     <button open-type='contact' >
     <image src="news.png" class="img"></image>
     </button>
+    
   </view>
   

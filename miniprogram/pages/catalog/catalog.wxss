@@ -1,1 +1,15 @@
 /* pages/catalog/catalog.wxss */
+
+
+.city_name{
+  margin-top: 20px;
+  text-align: center;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+}
+
+.sty{
+  margin-top: 20px;
+}

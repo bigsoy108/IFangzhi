@@ -1,17 +1,43 @@
-// pages/main_page/main_page.js
+// pages/detail/detail.js
+// 连接云端数据库
+
+const db = wx.cloud.database();
+const cont = db.collection('TANG');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ne:[],  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
+    cn:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    this.setData({
+      cn:options.cn
+    })
+    console.log(this.data.cn)
+
+     
+    db.collection('TANG').where(
+      {
+        old:this.data.cn     
+      }
+    ).get({
+      success:res=>{
+        console.log(res.data)
+        this.setData({
+          ne:res.data
+        })
+      }
+
+    })
 
   },
 
@@ -62,35 +88,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-
-  //  主页面的基础两个分类button
-  select_l: function(){
-
-    wx.navigateTo({
-      url: '/pages/index/index',
-    }),
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-
-  },
-
-  select_r: function(){
-
-    wx.navigateTo({
-      url: '/pages/catalog/catalog',
-    })
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-  },
-
-  
-
-
-  
+  }
 })
