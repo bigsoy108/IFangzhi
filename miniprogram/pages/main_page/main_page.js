@@ -68,7 +68,7 @@ Page({
   //  主页面的基础两个分类button
   select_l: function(){
 
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/index/index',
     }),
 
@@ -80,7 +80,7 @@ Page({
 
   select_r: function(){
 
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/catalog/catalog',
     })
 

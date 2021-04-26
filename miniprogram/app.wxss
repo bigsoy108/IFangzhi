@@ -1,4 +1,27 @@
 /**app.wxss**/
+
+
+.csb{
+  position:fixed;
+  
+  bottom:200rpx;
+
+  right: 50rpx;
+  
+  display:flex;
+
+  width:200rpx !important;
+
+  padding:0;
+  
+  justify-content:center;
+}
+
+.csb image{
+  width:70rpx;
+  height:60rpx;
+}
+
 .container {
   display: flex;
   flex-direction: column;

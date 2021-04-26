@@ -92,5 +92,46 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  click: function (option) {
+    console.log(option)
+    var cn = option.currentTarget.dataset.cn
+    wx.navigateTo({
+      url: '/pages/detail/detail?cn=' + option.currentTarget.dataset.cn,
+    })
+
+  },
+  formSubmit: function (e) {
+    //获取表单所有name=keyword的值
+    this.setData({
+      kw:e.detail.value.keyword
+    })
+
+    if(this.data.kw) {  
+        
+      wx.redirectTo({
+        url: '/pages/results/results?kw='+this.data.kw
+      })
+  
+      //显示搜索中的提示
+      wx.showLoading({
+        title: '搜索中',
+        icon: 'loading'
+      })
+
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 2000)      
+      }else{
+          wx.showToast({
+            title: '输入不能为空',
+            icon: 'none',
+            duration: 2000
+        }) 
+      }
+    
+
+  },
+
 })

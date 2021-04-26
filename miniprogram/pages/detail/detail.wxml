@@ -1,9 +1,6 @@
 <!--pages/detail/detail.wxml-->
-<view wx:for="{{ne}}">
-
-  <view>{{item.old}}</view>
-  <view>{{item.now}}</view>
-  <view>{{item.info}}</view>
-</view>
+  <view class="title">{{ne.old}}</view>
+  <view>对应现代城市：{{ne.now}}</view>
+  <view>具体内容：{{ne.info}}</view>
 
 

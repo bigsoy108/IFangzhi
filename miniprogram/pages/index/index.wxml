@@ -1,13 +1,17 @@
 <!-- 标题 -->
 <view class="title">小程序搜索</view>
+<button open-type='contact' class="csb">
+    <image src="/images/cs.png" class="csimg"></image>
+</button> 
+
 
 <!-- 搜索框view -->
 <view class="search_con">
 
 <!-- 表单 -->
-  <form bindsubmit="formSubmit">
+<form bindsubmit="formSubmit">
   <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
-    <input type="text" name="keyword" class="search_input" placeholder='你要找什么呢？'/>
-    <button formType="submit" class="search_btn">搜索</button>    
+    <input type="text" name="keyword" class="search_input" placeholder='请输入要找的地名'/>
+    <button formType="submit" type="primary" class="search_btn">搜索</button>  
   </form>
 </view>

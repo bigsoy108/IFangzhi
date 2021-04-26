@@ -74,6 +74,8 @@ Page({
         keyword:e.detail.value.keyword
       })
 
+      if(this.data.keyword) {  
+        
       wx.navigateTo({
         url: '/pages/results/results?kw='+this.data.keyword
       })
@@ -86,7 +88,15 @@ Page({
 
       setTimeout(function () {
         wx.hideLoading()
-      }, 2000)
+      }, 2000)      
+      }else{
+          wx.showToast({
+            title: '输入不能为空',
+            icon: 'none',
+            duration: 2000
+        }) 
+      }
+
       
 
     },

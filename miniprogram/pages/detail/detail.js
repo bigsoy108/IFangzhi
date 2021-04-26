@@ -10,7 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ne:[],  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
+    ne:{},  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
     cn:""
   },
 
@@ -33,7 +33,7 @@ Page({
       success:res=>{
         console.log(res.data)
         this.setData({
-          ne:res.data
+          ne:res.data[0]
         })
       }
 

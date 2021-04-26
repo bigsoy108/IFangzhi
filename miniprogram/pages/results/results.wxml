@@ -1,6 +1,20 @@
+<!-- 搜索框view -->
+<form bindsubmit="formSubmit">
+  <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input name="keyword" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" value="{{kw}}"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <button formType="submit" class="weui-search-bar__cancel-btn" >搜索</button>
+        </view>
+</form>
 <block wx:if="{{results.length>0}}">
-  <view wx:for="{{results}}">今-{{item.now}}||古-{{item.old}}</view>
+  <view class="tiaomu" wx:for="{{results}}" data-cn="{{item.old}}" bindtap="click">今-{{item.now}}||古-{{item.old}}</view>
 </block>
-<block wx:else>
-  <view>没有找到</view>
+<block  wx:else>
+  <view class="tiaomu">没有找到</view>
 </block>

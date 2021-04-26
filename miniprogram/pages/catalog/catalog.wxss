@@ -2,7 +2,7 @@
 
 
 .city_name{
-  margin-top: 20px;
+  margin-top: 20rpx;
   text-align: center;
   height: 100rpx;
   width: 100%;
@@ -11,5 +11,5 @@
 }
 
 .sty{
-  margin-top: 20px;
+  margin-bottom: 40rpx;
 }

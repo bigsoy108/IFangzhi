@@ -2,7 +2,9 @@
 <!-- 主页面标题 -->
 
 <view class="title">欢迎使用地方志</view>
-
+<button open-type='contact' class="csb">
+    <image src="/images/cs.png" class="csimg"></image>
+</button> 
 
 <!--两个按钮的各自导向-->
 
@@ -12,9 +14,6 @@
 
     <button  bindtap="select_r" type="primary" class="button">地名大纲</button>
     
-    <button open-type='contact' >
-    <image src="news.png" class="img"></image>
-    </button>
     
   </view>
   
