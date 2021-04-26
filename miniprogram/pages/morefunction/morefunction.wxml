@@ -1,5 +1,7 @@
 <!--miniprogram/pages/morefunction.wxml-->
-
+<button open-type='contact' class="csb">
+    <image src="/images/cs.png" class="csimg"></image>
+</button> 
 <view class="main">
 
 <button  bindtap="to_aboutus" type="primary" class="button">关于我们</button>

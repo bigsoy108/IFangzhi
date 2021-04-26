@@ -1,8 +1,20 @@
 /* miniprogram/pages/aboutus/aboutus.wxss */
+page{
+  height: 100%;
+  width: 90%;
+  margin:0 auto;
+}
+
 .title{
-  margin-top: 100rpx;
-  text-align: center;
-  font-size: 40rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
   font-weight:bold;
-  height: 20%;
+  height: 8%;
+}
+
+.content{
+  text-align: center;
 }

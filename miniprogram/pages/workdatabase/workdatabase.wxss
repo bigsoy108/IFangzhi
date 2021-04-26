@@ -1,1 +1,6 @@
 /* miniprogram/pages/workdatabase/workdatabase.wxss */
+.tiaomu{
+  font-size:36rpx;
+  width: 80%;
+  margin:20rpx auto;
+}

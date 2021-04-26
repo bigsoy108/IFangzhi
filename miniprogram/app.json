@@ -27,6 +27,11 @@
         "pagePath": "pages/catalog/catalog",
         "iconPath": "images/catalog-off.png",
         "selectedIconPath": "images/catalog-on.png"
+      },
+      {
+        "pagePath": "pages/morefunction/morefunction",
+        "iconPath": "images/about-off.png",
+        "selectedIconPath": "images/about-on.png"
       }
     ]
   },

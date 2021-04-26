@@ -93,7 +93,7 @@ Page({
 
   select_m: function(){
 
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/morefunction/morefunction',
     })
   },

@@ -29,4 +29,6 @@ page{
   /* background: #56b273 !important; */
   color: #fff;
   border-radius: 200rpx;
+  line-height: 80rpx;
+  padding:0;
 }

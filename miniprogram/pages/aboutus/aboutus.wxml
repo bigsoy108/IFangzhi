@@ -1,5 +1,5 @@
 <!--miniprogram/pages/aboutus/aboutus.wxml-->
 <view class="title">关于我们</view>
-<text>本小程序由四位南开大学开发者共同完成</text>
-<text>创意偶得之，呕心沥血，无数心血予以完成</text>
-<text>学号只得一位高人，大概是1813053</text>
+<view class="content">
+乘墟待馬真君
+</view>
