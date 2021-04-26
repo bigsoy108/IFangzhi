@@ -1,4 +1,6 @@
-// pages/main_page/main_page.js
+// miniprogram/pages/workdatabase/workdatabase.js
+const db = wx.cloud.database()
+const _ = db.command
 Page({
 
   /**
@@ -12,7 +14,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      kw:options.kw
+    })
+    console.log(this.data.kw)
 
+    db.collection("kaifa").where(_).get({
+      success:res=>{
+        console.log(res)
+        this.setData({
+          results:res.data
+        })
+      }
+    })
   },
 
   /**
@@ -62,40 +76,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-
-  //  主页面的基础两个分类button
-  select_l: function(){
-
-    wx.switchTab({
-      url: '/pages/index/index',
-    }),
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-
-  },
-
-  select_r: function(){
-
-    wx.switchTab({
-      url: '/pages/catalog/catalog',
-    })
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-  },
-
-  
-
-  select_m: function(){
-
-    wx.navigateTo({
-      url: '/pages/morefunction/morefunction',
-    })
-  },
-  
+  }
 })

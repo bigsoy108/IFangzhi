@@ -1,0 +1,10 @@
+<!--miniprogram/pages/morefunction.wxml-->
+
+<view class="main">
+
+<button  bindtap="to_aboutus" type="primary" class="button">关于我们</button>
+
+<button  bindtap="to_database" type="primary" class="button">开发日志</button>
+
+<button   type="primary" class="button" open-type="feedback">意见反馈</button>
+</view>

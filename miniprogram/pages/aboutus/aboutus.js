@@ -1,4 +1,4 @@
-// pages/main_page/main_page.js
+// miniprogram/pages/aboutus/aboutus.js
 Page({
 
   /**
@@ -62,40 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-
-  //  主页面的基础两个分类button
-  select_l: function(){
-
-    wx.switchTab({
-      url: '/pages/index/index',
-    }),
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-
-  },
-
-  select_r: function(){
-
-    wx.switchTab({
-      url: '/pages/catalog/catalog',
-    })
-
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 2000)
-  },
-
-  
-
-  select_m: function(){
-
-    wx.navigateTo({
-      url: '/pages/morefunction/morefunction',
-    })
-  },
-  
+  }
 })

@@ -1,0 +1,8 @@
+/* miniprogram/pages/aboutus/aboutus.wxss */
+.title{
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight:bold;
+  height: 20%;
+}

@@ -15,5 +15,10 @@
     <button  bindtap="select_r" type="primary" class="button">地名大纲</button>
     
     
+    <button  bindtap="select_m" type="primary" class="button">更多功能</button>
+
+    <button open-type='contact' >
+    <image src="news.png" class="img"></image>
+    </button>
   </view>
   

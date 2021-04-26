@@ -1,0 +1,6 @@
+<block wx:if="{{results.length>0}}">
+  <view class="tiaomu" wx:for="{{results}}">时间：{{item.time}}  工作：{{item.work}}</view>
+</block>
+<block  wx:else>
+  <view class="tiaomu">没有找到</view>
+</block>

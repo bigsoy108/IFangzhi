@@ -4,7 +4,10 @@
     "pages/index/index",
     "pages/results/results",
     "pages/catalog/catalog",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/morefunction/morefunction",
+    "pages/aboutus/aboutus",
+    "pages/workdatabase/workdatabase"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -14,16 +17,18 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "images/search-off.png",
-      "selectedIconPath": "images/search-on.png"
-    },
-    {
-      "pagePath": "pages/catalog/catalog",
-      "iconPath": "images/catalog-off.png",
-      "selectedIconPath": "images/catalog-on.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/search-off.png",
+        "selectedIconPath": "images/search-on.png"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "images/catalog-off.png",
+        "selectedIconPath": "images/catalog-on.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
