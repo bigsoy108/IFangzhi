@@ -53,7 +53,6 @@ Page({
         this.setData({
           markers: items
         })
-        console.log(this.data.markers)
       }
     })
 
@@ -124,7 +123,6 @@ Page({
   },
 
   mapdetail: function(e){
-    console.log(e)
     var cn = this.data.markers[e.detail.markerId].label.content
     wx.navigateTo({
       url: '/pages/detail/detail?cn=' + cn,
