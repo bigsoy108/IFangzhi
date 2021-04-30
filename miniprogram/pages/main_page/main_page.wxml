@@ -16,6 +16,5 @@
     
     
     <button  bindtap="select_m" type="primary" class="button">更多功能</button>
-
   </view>
   

@@ -100,4 +100,12 @@ Page({
       
 
     },
+
+maps: function(){
+  wx.navigateTo({
+    url: '/pages/mapsearch/mapsearch'
+  })
+}
+
+
 })

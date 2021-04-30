@@ -2,6 +2,7 @@
   "pages": [
     "pages/main_page/main_page",
     "pages/index/index",
+    "pages/mapsearch/mapsearch",
     "pages/results/results",
     "pages/catalog/catalog",
     "pages/detail/detail",
@@ -34,6 +35,11 @@
         "selectedIconPath": "images/about-on.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要定位"
+    }
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

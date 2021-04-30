@@ -14,4 +14,5 @@
     <input type="text" name="keyword" class="search_input" placeholder='请输入要找的地名'/>
     <button formType="submit" type="primary" class="search_btn">搜索</button>  
   </form>
+  <button bindtap="maps" type="primary" class="search_btn">定位搜索</button>  
 </view>
