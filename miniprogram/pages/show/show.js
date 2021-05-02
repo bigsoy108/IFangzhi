@@ -1,17 +1,52 @@
-// miniprogram/pages/morefunction.js
+// miniprogram/pages/show/show.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
- },
+    selectArray: [{
+      "id": "0",
+      "text": "秦",
+      "target":"QIN"
+  }, {
+      "id": "1",
+      "text": "汉",
+      "target":"HAN"
+  },
+  {
+    "id": "2",
+    "text": "唐",
+    "target":"TANG"
+},
+{
+  "id": "3",
+  "text": "宋",
+  "target":"SONG"
+},
+{
+  "id": "4",
+  "text": "明",
+  "target":"MING"
+},
+{
+  "id": "5",
+  "text": "清",
+  "target":"QING"
+}
+]
+ 
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    setTimeout(() => {
+      var app = getApp()
+      app.globalData.dynasty = this.data.selectArray[0].target
+      console.log(app.globalData.dynasty)
+    }, 1000)
   },
 
   /**
@@ -25,7 +60,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
@@ -62,14 +96,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  to_aboutus:function(){
-    wx.navigateTo({
-      url: '/pages/aboutus/aboutus',
-    })
-  },
-  to_database:function(){
-    wx.navigateTo({
-      url: '/pages/workdatabase/workdatabase',
-    })
-  }
+  getDate:function(e){
+    console.log(e.detail)
+}
 })

@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/show/show",
     "pages/main_page/main_page",
+    "Component/select/select",
     "pages/index/index",
     "pages/mapsearch/mapsearch",
     "pages/results/results",
