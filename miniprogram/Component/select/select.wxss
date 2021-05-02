@@ -1,5 +1,5 @@
 .com-selectBox{
-  width: 30%;
+  width: 45%;
   margin-left: 50rpx;
 }
 .com-sContent{
@@ -49,4 +49,18 @@
 }
 .com-sItem:first-child{
   border-top: none;
+}
+.csb{
+  margin-top: -70rpx;
+  position:fixed;
+  right: 50rpx;
+  display:flex;
+  width:200rpx !important;
+  padding:0;
+  justify-content:center;
+}
+
+.csb image{
+  width:70rpx;
+  height:60rpx;
 }

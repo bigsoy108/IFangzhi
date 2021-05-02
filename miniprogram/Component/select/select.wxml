@@ -1,4 +1,3 @@
-
 <view class='com-selectBox'>
     <view class='com-sContent' bindtap='selectToggle'>
         <view class='com-sTxt'>{{nowText=="" ? propArray[0].text:nowText}}</view>
@@ -8,3 +7,6 @@
         <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.text}}</view>
     </view>
 </view>
+<button open-type='contact' class="csb">
+    <image src="/images/cs.png"  class="csimg"></image>
+</button> 
