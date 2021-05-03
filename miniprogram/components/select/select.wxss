@@ -1,6 +1,7 @@
 .com-selectBox{
-  width: 45%;
+  width: 30%;
   margin-left: 50rpx;
+  position:fixed;
 }
 .com-sContent{
   border: 5rpx solid #e2e2e2;
@@ -27,7 +28,7 @@
 }
 .com-sList{
   background: white;
-  width: inherit;
+  width: 100%;
   position: absolute;
   border: 1px solid #e2e2e2;
   border-top: none;
