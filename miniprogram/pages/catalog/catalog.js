@@ -1,7 +1,7 @@
 // pages/catalog/catalog.js
 // 连接云端数据库
 const db = wx.cloud.database();
-const cont = db.collection('TANG');
+const app = getApp()
 
 Page({
 
@@ -18,14 +18,12 @@ Page({
    */
   onLoad: function (options) {
 
-    var _this = this;
 
     //开始查询数据了  news对应的是集合的名称   
-    db.collection('TANG').get({
+    db.collection(app.globalData.dynasty).get({
 
       //如果查询成功的话    
       success: res => {
-        console.log(res.data)
 
         //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
         this.setData({
@@ -47,14 +45,26 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    db.collection(app.globalData.dynasty).get({
 
+      //如果查询成功的话    
+      success: res => {
+
+        //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+        this.setData({
+          ne: res.data
+        })
+      }
+    })
+    this.selectComponent('#sec').setData({
+      nowText:app.globalData.name
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
@@ -83,6 +93,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  refresh: function(e){
+    this.onShow()
   },
 
   click: function (option) {

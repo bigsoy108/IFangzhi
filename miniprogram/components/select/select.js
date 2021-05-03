@@ -1,11 +1,12 @@
-
+const app = getApp()
 Component({
   /**
    * 组件的属性列表
    */
     properties: {
-        propArray:{
-            type:Array,
+        propArray: {
+            type: Array,
+            value: [{text:"唐"}]
         }
     },
   /**
@@ -14,14 +15,27 @@ Component({
     data: {
         selectShow:false,//初始option不显示
         nowText:"",//初始内容
-        animationData:{}//右边箭头的动画
+        animationData:{},//右边箭头的动画
     },
+    lifetimes:{
+        created:function(){
+          console.log("--------created 组件实例刚刚被创建时执行---------")
+          console.log("认证："+app.globalData.selectArray[0].target)
+          this.setData({
+            propArray:app.globalData.selectArray,
+         })
+        }
+       },
   /**
    * 组件的方法列表
    */
     methods: {
 　　　//option的显示与否
         selectToggle:function(){
+            console.log(this.data)
+            this.setData({
+                propArray:app.globalData.selectArray
+             })
             var nowShow=this.data.selectShow;//获取当前option显示的状态
             //创建动画
             var animation = wx.createAnimation({
@@ -45,6 +59,7 @@ Component({
         },
         //设置内容
         setText:function(e){
+            console.log(this.properties.propArray)
             var nowData = this.properties.propArray;//当前option的数据是引入组件的页面传过来的，所以这里获取数据只有通过this.properties
             var nowIdx = e.target.dataset.index;//当前点击的索引
             var nowText = nowData[nowIdx].text;//当前点击的内容
@@ -56,15 +71,11 @@ Component({
                 nowText:nowText,
                 animationData: this.animation.export()
             })
-            var nowDate={
-                id:nowIdx,
-                text:nowText,
-                target:nowTarget
-            }
-            this.triggerEvent('myget', nowDate)
             var app = getApp()
             app.globalData.dynasty = nowTarget
+            app.globalData.name = nowText
             console.log(app.globalData.dynasty)
+            this.triggerEvent('re')
         }
     }
   })

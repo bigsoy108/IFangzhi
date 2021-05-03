@@ -2,7 +2,7 @@
 // 连接云端数据库
 
 const db = wx.cloud.database();
-const cont = db.collection('TANG');
+const app = getApp();
 
 Page({
 
@@ -25,7 +25,7 @@ Page({
     console.log(this.data.cn)
 
      
-    db.collection('TANG').where(
+    db.collection(app.globalData.dynasty).where(
       {
         old:this.data.cn     
       }

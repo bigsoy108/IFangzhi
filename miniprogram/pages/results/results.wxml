@@ -1,3 +1,4 @@
+<Select id="sec" bind:re="refresh"></Select>
 <!-- 搜索框view -->
 <form bindsubmit="formSubmit">
   <view class="weui-search-bar">

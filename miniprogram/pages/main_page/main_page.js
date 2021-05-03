@@ -12,7 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.cloud.database().collection("List").get({
+      success:res=>{
+        getApp().globalData.selectArray = res.data
+        getApp().globalData.dynasty = res.data[0].target
+        getApp().globalData.name = res.data[0].text
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

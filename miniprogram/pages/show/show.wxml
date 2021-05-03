@@ -1,2 +1,2 @@
 
-<Select prop-array='{{selectArray}}' bind:myget='getDate' ></Select>
+<Select  bind:myget='getDate' ></Select>

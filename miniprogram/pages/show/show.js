@@ -1,6 +1,6 @@
 // miniprogram/pages/show/show.js
 const db = wx.cloud.database()
-const _ = db.command
+
 Page({
 
   /**
@@ -8,36 +8,7 @@ Page({
    */
   data: {
     selectArray: [
-      //{
-//       "id": "0",
-//       "text": "秦",
-//       "target":"QIN"
-//   }, {
-//       "id": "1",
-//       "text": "汉",
-//       "target":"HAN"
-//   },
-//   {
-//     "id": "2",
-//     "text": "唐",
-//     "target":"TANG"
-// },
-// {
-//   "id": "3",
-//   "text": "宋",
-//   "target":"SONG"
-// },
-// {
-//   "id": "4",
-//   "text": "明",
-//   "target":"MING"
-// },
-// {
-//   "id": "5",
-//   "text": "清",
-//   "target":"QING"
-// }
-]
+  ]
  
   },
 
@@ -45,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      db.collection("List").where(_).get({
+      db.collection("List").get({
         success:res=>{
           console.log(res)
           this.setData({
@@ -59,12 +30,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    setTimeout(() => {
-      console.log(this.data.selectArray)
-      var app = getApp()
-      app.globalData.dynasty = this.data.selectArray[0].target
-      console.log(app.globalData.dynasty)
-    }, 1000)
+
   },
 
   /**

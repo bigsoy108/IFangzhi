@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "Select": "/components/select/select"
+  },
   "navigationBarTitleText": "搜索结果"
 }

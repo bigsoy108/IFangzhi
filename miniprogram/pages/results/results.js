@@ -2,6 +2,7 @@
 
 const db = wx.cloud.database()
 const _ = db.command
+const app = getApp()
 
 Page({
 
@@ -22,7 +23,7 @@ Page({
     })
     console.log(this.data.kw)
 
-    db.collection("TANG").where(_.or([
+    db.collection(app.globalData.dynasty).where(_.or([
       {
         now:({
           $regex:'.*' + this.data.kw + '.*',
@@ -56,7 +57,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    db.collection(app.globalData.dynasty).where(_.or([
+      {
+        now:({
+          $regex:'.*' + this.data.kw + '.*',
+          $options: 'i'
+        }) 
+      },
+      {
+        old:({
+          $regex:'.*' + this.data.kw + '.*',
+          $options: 'i'
+        })
+      }
+    ])).get({
+      success:res=>{
+        console.log(res)
+        this.setData({
+          results:res.data
+        })
+      }
+    })
+    this.selectComponent('#sec').setData({
+      nowText:getApp().globalData.name
+    })
   },
 
   /**
@@ -132,6 +156,9 @@ Page({
       }
     
 
+  },
+  refresh: function(e){
+    this.onShow()
   },
 
 })
