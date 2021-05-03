@@ -5,27 +5,18 @@ Component({
    */
     properties: {
         propArray: {
-            type: Array,
-            value: [{text:"唐"}]
+            type: Array
         }
     },
+    
   /**
    * 组件的初始数据
    */
     data: {
         selectShow:false,//初始option不显示
-        nowText:"",//初始内容
+        nowText:"唐",//初始内容
         animationData:{},//右边箭头的动画
     },
-    lifetimes:{
-        created:function(){
-          console.log("--------created 组件实例刚刚被创建时执行---------")
-          console.log("认证："+app.globalData.selectArray[0].target)
-          this.setData({
-            propArray:app.globalData.selectArray,
-         })
-        }
-       },
   /**
    * 组件的方法列表
    */

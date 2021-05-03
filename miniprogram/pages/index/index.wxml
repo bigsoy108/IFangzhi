@@ -1,4 +1,10 @@
-<Select id="sec"></Select>
+<view>
+<Select id="sec" >
+</Select>
+<button open-type='contact' class="csb">
+        <image src="/images/cs.png"  class="csimg"></image>
+</button> 
+</view>
 <!-- 标题 -->
 <view class="title">小程序搜索{{array[0].target}}</view>
 
@@ -9,7 +15,7 @@
 <!-- 表单 -->
 <form bindsubmit="formSubmit">
   <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
-    <input type="text" name="keyword" class="search_input" placeholder='请输入要找的地名'/>
+    <input type="text" name="keyword" class="search_input" placeholder='请输入要找的地名' value="{{keyword}}"/>
     <button formType="submit" type="primary" class="search_btn">搜索</button>  
 </form>
   <button bindtap="maps" type="primary" class="search_btn">定位搜索</button>  

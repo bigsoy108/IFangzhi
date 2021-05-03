@@ -2,7 +2,35 @@
 page{
   height: 100%;
 }
+.cont{
+  margin-top: 100rpx;
+}
+.ttt{
+  line-height: 56rpx;
+  width:16%;
+  height: 56rpx;
+}
 
+.com-selectBox{
+  width: 86%;
+  margin-left: 2rpx;
+  z-index: 10;
+  height: 56rpx;
+}
+.ttt image{
+  width:30rpx;
+  top:16rpx;
+  left:50rpx;
+}
+
+.com-sContent{
+  border: 5rpx solid #e2e2e2;
+  background: white;
+  font-size: 50rpx;
+  position: relative;
+  height: 56rpx;
+  line-height: 56rpx;
+}
 
 .tiaomu{
   font-size:36rpx;
@@ -11,10 +39,9 @@ page{
 }
 
 .weui-search-bar {
-  position: relative;
+  position: fixed;
   padding: 16rpx 20rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
+  width:100%;
   display: flex;
   box-sizing: border-box;
   background-color: #EFEFF4;

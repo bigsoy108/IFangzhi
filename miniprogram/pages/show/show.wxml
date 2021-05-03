@@ -1,2 +1,0 @@
-
-<Select  bind:myget='getDate' ></Select>

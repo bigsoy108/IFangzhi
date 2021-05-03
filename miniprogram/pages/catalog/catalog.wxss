@@ -1,5 +1,8 @@
 /* pages/catalog/catalog.wxss */
-
+.ttt{
+  position:fixed;
+  width: 100%;
+}
 
 .city_name{
   margin-top: 20rpx;

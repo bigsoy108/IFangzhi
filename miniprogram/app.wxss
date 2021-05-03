@@ -1,5 +1,26 @@
 /**app.wxss**/
-
+.com-selectBox{
+  width: 30%;
+  margin-left: 50rpx;
+  z-index: 10;
+}
+.com-sContent{
+  border: 5rpx solid #e2e2e2;
+  background: white;
+  font-size: 50rpx;
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.csb{
+  margin-top: -70rpx;
+  position:fixed;
+  right: 50rpx;
+  display:flex;
+  width:200rpx !important;
+  padding:0;
+  justify-content:center;
+}
 
 .csb image{
   width:70rpx;

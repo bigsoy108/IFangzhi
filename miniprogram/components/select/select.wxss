@@ -1,16 +1,5 @@
-.com-selectBox{
-  width: 30%;
-  margin-left: 50rpx;
-  position:fixed;
-}
-.com-sContent{
-  border: 5rpx solid #e2e2e2;
-  background: white;
-  font-size: 50rpx;
-  position: relative;
-  height: 80rpx;
-  line-height: 80rpx;
-}
+
+
 .com-sImg{
   position: absolute;
   right: 40rpx;
@@ -28,7 +17,7 @@
 }
 .com-sList{
   background: white;
-  width: 100%;
+  width: 20%;
   position: absolute;
   border: 1px solid #e2e2e2;
   border-top: none;
@@ -50,18 +39,4 @@
 }
 .com-sItem:first-child{
   border-top: none;
-}
-.csb{
-  margin-top: -70rpx;
-  position:fixed;
-  right: 50rpx;
-  display:flex;
-  width:200rpx !important;
-  padding:0;
-  justify-content:center;
-}
-
-.csb image{
-  width:70rpx;
-  height:60rpx;
 }

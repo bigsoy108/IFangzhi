@@ -1,5 +1,9 @@
 <!--pages/catalog/catalog.wxml-->
-<Select id="sec" bind:re="refresh"></Select>
+<view>
+    <Select id="sec" bind:re="refresh" class="ttt"></Select>
+</view>
+
+
 <view class="city_name">
 <view  wx:for="{{ne}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
     

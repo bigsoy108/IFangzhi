@@ -1,11 +1,10 @@
 {
   "pages": [
     "pages/main_page/main_page",
-    "pages/show/show",
+    "pages/results/results",
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/mapsearch/mapsearch",
-    "pages/results/results",
     "pages/detail/detail",
     "pages/morefunction/morefunction",
     "pages/aboutus/aboutus",

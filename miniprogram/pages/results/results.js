@@ -131,6 +131,11 @@ Page({
     this.setData({
       kw:e.detail.value.keyword
     })
+    var pages = getCurrentPages()
+    var currPage = pages[pages.length - 2]
+    currPage.setData({
+      keyword:this.data.kw
+    })
 
     if(this.data.kw) {  
         

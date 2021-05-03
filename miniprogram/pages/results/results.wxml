@@ -1,7 +1,8 @@
-<Select id="sec" bind:re="refresh"></Select>
+
 <!-- 搜索框view -->
 <form bindsubmit="formSubmit">
   <view class="weui-search-bar">
+    <Select id="sec" bind:re="refresh" class="ttt" com-sContent="tyy"></Select>
             <view class="weui-search-bar__form">
             <!-- 搜索框 -->
                 <view class="weui-search-bar__box">
@@ -13,9 +14,11 @@
             <button formType="submit" class="weui-search-bar__cancel-btn" >搜索</button>
         </view>
 </form>
+<view class="cont">
 <block wx:if="{{results.length>0}}">
   <view class="tiaomu" wx:for="{{results}}" data-cn="{{item.old}}" bindtap="click">今-{{item.now}}||古-{{item.old}}</view>
 </block>
 <block  wx:else>
   <view class="tiaomu">没有找到</view>
 </block>
+</view>
