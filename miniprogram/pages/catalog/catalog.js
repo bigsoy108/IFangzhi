@@ -85,7 +85,27 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    wx.showLoading({
+      title: '刷新中',
+      duration: 1000
+    })
+    
+    var x = this.data.ne.length
+    console.log(x)
+    var old_data = this.data.ne
+    db.collection(app.globalData.dynasty).skip(x).get({
 
+      //如果查询成功的话    
+      success: res => {
+
+        //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+        this.setData({
+          ne: old_data.concat(res.data),
+        })
+      }
+    })
+    console.log('circle 下一页');
+  
   },
 
   /**

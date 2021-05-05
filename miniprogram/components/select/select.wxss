@@ -15,17 +15,7 @@
   padding:0 40rpx 0 15rpx;
   font-size: 35rpx;
 }
-.com-sList{
-  background: white;
-  width: 20%;
-  position: absolute;
-  border: 1px solid #e2e2e2;
-  border-top: none;
-  box-sizing: border-box;
-  z-index: 3;
-  max-height: 120px;
-  overflow: auto;
-}
+
 .com-sItem{
   height: 30px;
   line-height: 30px;

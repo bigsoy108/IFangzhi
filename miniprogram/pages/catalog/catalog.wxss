@@ -1,9 +1,8 @@
 /* pages/catalog/catalog.wxss */
 .ttt{
   position:fixed;
-  width: 100%;
+  width: 30%;
 }
-
 .city_name{
   margin-top: 20rpx;
   text-align: center;

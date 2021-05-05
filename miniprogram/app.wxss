@@ -1,6 +1,6 @@
 /**app.wxss**/
 .com-selectBox{
-  width: 30%;
+  width: 200rpx;
   margin-left: 50rpx;
   z-index: 10;
 }
@@ -20,6 +20,17 @@
   width:200rpx !important;
   padding:0;
   justify-content:center;
+}
+.com-sList{
+  background: white;
+  width: 200rpx;
+  position: absolute;
+  border: 1px solid #e2e2e2;
+  border-top: none;
+  box-sizing: border-box;
+  z-index: 3;
+  max-height: 120px;
+  overflow: auto;
 }
 
 .csb image{

@@ -108,7 +108,37 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    wx.showLoading({
+      title: '刷新中',
+      duration: 1000
+    })
+    
+    var x = this.data.results.length
+    console.log(x)
+    var old_data = this.data.results
+    db.collection(app.globalData.dynasty).where(_.or([
+      {
+        now:({
+          $regex:'.*' + this.data.kw + '.*',
+          $options: 'i'
+        }) 
+      },
+      {
+        old:({
+          $regex:'.*' + this.data.kw + '.*',
+          $options: 'i'
+        })
+      }
+    ])).skip(x).get({
+      success:res=>{
+        console.log(res)
+        this.setData({
+          results: old_data.concat(res.data),
+        })
+      }
+    })
+    console.log('circle 下一页');
+  
   },
 
   /**
