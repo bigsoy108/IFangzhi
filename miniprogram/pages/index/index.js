@@ -105,6 +105,12 @@ maps: function(){
   wx.navigateTo({
     url: '/pages/mapsearch/mapsearch'
   })
+},
+
+recommend: function(){
+  wx.navigateTo({
+    url: '/pages/recommend/recommend',
+  })
 }
 
 

@@ -1,46 +1,47 @@
 {
-  "pages": [
-    "pages/main_page/main_page",
-    "pages/results/results",
-    "pages/index/index",
-    "pages/catalog/catalog",
-    "pages/mapsearch/mapsearch",
-    "pages/detail/detail",
-    "pages/morefunction/morefunction",
-    "pages/aboutus/aboutus",
-    "pages/workdatabase/workdatabase"
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#56b273",
-    "navigationBarTitleText": "简易地方志",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/search-off.png",
-        "selectedIconPath": "images/search-on.png"
-      },
-      {
-        "pagePath": "pages/catalog/catalog",
-        "iconPath": "images/catalog-off.png",
-        "selectedIconPath": "images/catalog-on.png"
-      },
-      {
-        "pagePath": "pages/morefunction/morefunction",
-        "iconPath": "images/about-off.png",
-        "selectedIconPath": "images/about-on.png"
-      }
-    ]
-  },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "需要定位"
-    }
-  },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+    "pages": [
+        "pages/main_page/main_page",
+        "pages/results/results",
+        "pages/index/index",
+        "pages/catalog/catalog",
+        "pages/mapsearch/mapsearch",
+        "pages/detail/detail",
+        "pages/morefunction/morefunction",
+        "pages/aboutus/aboutus",
+        "pages/workdatabase/workdatabase",
+        "pages/recommend/recommend"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#56b273",
+        "navigationBarTitleText": "简易地方志",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/search-off.png",
+                "selectedIconPath": "images/search-on.png"
+            },
+            {
+                "pagePath": "pages/catalog/catalog",
+                "iconPath": "images/catalog-off.png",
+                "selectedIconPath": "images/catalog-on.png"
+            },
+            {
+                "pagePath": "pages/morefunction/morefunction",
+                "iconPath": "images/about-off.png",
+                "selectedIconPath": "images/about-on.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "需要定位"
+        }
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
 }

@@ -19,4 +19,5 @@
     <button formType="submit" type="primary" class="search_btn">搜索</button>  
 </form>
   <button bindtap="maps" type="primary" class="search_btn">定位搜索</button>  
+  <button bindtap="recommend" type="primary" class="search_btn">特色推荐</button>  
 </view>
