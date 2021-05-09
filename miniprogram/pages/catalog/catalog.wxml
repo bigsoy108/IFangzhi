@@ -1,6 +1,17 @@
 <!--pages/catalog/catalog.wxml-->
+
 <view>
     <Select id="sec" bind:re="refresh" class="ttt"></Select>
+</view>
+<view class="list-msg">
+    <view class="list-msg2" bindtap="bindShowMsg">
+        <text>{{tihuoWay}}</text>
+    </view>
+</view>
+<view class="select_box" wx:if="{{select}}">
+    <view class="select_one" bindtap="mySelect"  data-name="全部" data-cl="0">全部</view>
+    <view class="select_one" bindtap="mySelect"  data-name="省级" data-cl="1">省级</view>
+    <view class="select_one" bindtap="mySelect"  data-name="市级" data-cl="2">市级</view>
 </view>
 
 

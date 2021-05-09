@@ -11,6 +11,9 @@ Page({
   data: {
     ne:[],  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
     cn:"",    //对应的古地名
+    select: false,
+    tihuoWay: '全部',
+    classi: "",
   },
 
   /**
@@ -45,7 +48,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    db.collection(app.globalData.dynasty).get({
+    var classi = this.data.classi
+    console.log(classi)
+    if(classi==0){
+      db.collection(app.globalData.dynasty).get({
+
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: res.data
+          })
+        }
+      })
+    }
+  if(classi==1){
+    db.collection(app.globalData.dynasty).where({
+      level: 1
+    }).get({
 
       //如果查询成功的话    
       success: res => {
@@ -56,9 +77,29 @@ Page({
         })
       }
     })
+      
+    }
+    if(classi==2){
+      db.collection(app.globalData.dynasty).where({
+        level: 2
+      }).get({
+
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: res.data
+          })
+        }
+      })
+
+    }
+    
     this.selectComponent('#sec').setData({
       nowText:app.globalData.name
     })
+
   },
 
   /**
@@ -89,21 +130,54 @@ Page({
       title: '刷新中',
       duration: 1000
     })
-    
+    var classic = this.data.classi
     var x = this.data.ne.length
     console.log(x)
     var old_data = this.data.ne
-    db.collection(app.globalData.dynasty).skip(x).get({
+    if(classic == 0){
+      db.collection(app.globalData.dynasty).skip(x).get({
 
-      //如果查询成功的话    
-      success: res => {
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: old_data.concat(res.data),
+          })
+        }
+      })
+    }
+    if(classic == 1){
+      db.collection(app.globalData.dynasty).skip(x).where({
+        level: 1
+      }).get({
 
-        //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
-        this.setData({
-          ne: old_data.concat(res.data),
-        })
-      }
-    })
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: old_data.concat(res.data),
+          })
+        }
+      })
+    }
+    if(classic == 2){
+      db.collection(app.globalData.dynasty).skip(x).where({
+        level: 2
+      }).get({
+
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: old_data.concat(res.data),
+          })
+        }
+      })
+    }
+    
     console.log('circle 下一页');
   
   },
@@ -125,6 +199,27 @@ Page({
       url: '/pages/detail/detail?cn=' + option.currentTarget.dataset.cn,
     })
 
+  },
+
+
+  bindShowMsg(){
+    this.setData({
+      select: !this.data.select
+    })
+  },
+
+  mySelect(e){
+    var name = e.currentTarget.dataset.name
+    var cl = e.currentTarget.dataset.cl
+    this.setData({
+      tihuoWay: name,
+      select:false,
+      classi: cl
+    })
+    this.onShow()
+
   }
+
+   
 
 })

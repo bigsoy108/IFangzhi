@@ -3,6 +3,54 @@
   position:fixed;
   width: 30%;
 }
+
+
+.list-msg {
+  position: fixed;
+  width: 30%;
+  top: 10rpx;
+  left: 500rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.list-msg .list-msg2 {
+  position: fixed;
+  height: 60rpx;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 0 10rpx;
+}
+
+select_box {
+  background-color:#eee;
+  position: relative;
+  left:500rpx;
+  width: 30%;
+  position: absolute;
+  top: 40rpx;
+  z-index: 1;
+  overflow: hidden;
+  animation:  myfirst 0.5s;
+}
+@keyframes myfirst{
+  from{
+    height: 0rpx;
+  }
+  to{
+    height: 120rpx;
+  }
+}
+
+.select_one{
+
+  width: 30%;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-bottom:1px solid #ccc;
+}
+
 .city_name{
   margin-top: 20rpx;
   text-align: center;
@@ -15,3 +63,4 @@
 .sty{
   margin-bottom: 40rpx;
 }
+
