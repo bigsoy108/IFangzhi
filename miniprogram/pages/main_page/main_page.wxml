@@ -6,12 +6,12 @@
 <!--两个按钮的各自导向-->
 
 <view class="main">
-    <button  bindtap="select_l" type="primary" class="button">小程序搜索</button>
+    <button  bindtap="select_l" type="primary" class="button" >小程序搜索</button>
 
-    <button  bindtap="select_r" type="primary" class="button">地名大纲</button>
+    <button  bindtap="select_r" type="primary" class="button" >地名大纲</button>
     
     
-    <button  bindtap="select_m" type="primary" class="button">更多功能</button>
+    <button  bindtap="select_m" type="primary" class="button" >更多功能</button>
 
   </view>
   
