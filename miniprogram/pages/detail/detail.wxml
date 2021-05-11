@@ -2,5 +2,8 @@
   <view class="title">{{ne.old}}</view>
   <view>对应现代城市：{{ne.now}}</view>
   <view>具体内容：{{ne.info}}</view>
+  <view>特色：</view>
+  <view wx:if="{{ne.mingren}}">名人：{{ne.mingren}}</view>
+  <view wx:if="{{ne.building}}">建筑：{{ne.building}}</view>
 
 
