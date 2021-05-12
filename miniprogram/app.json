@@ -12,9 +12,8 @@
         "pages/recommend/recommend"
     ],
     "window": {
-        "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#56b273",
+        "navigationBarBackgroundColor": "#abb6c8",
         "navigationBarTitleText": "简易地方志",
         "navigationBarTextStyle": "black"
     },
