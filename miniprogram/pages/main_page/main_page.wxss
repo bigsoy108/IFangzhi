@@ -3,6 +3,14 @@ page{
   height: 100%;
 }
 
+.bi{
+  height : 100%;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
 .title{
   margin: 100rpx auto 0;
   display: flex;
