@@ -2,6 +2,7 @@
 
 const db = wx.cloud.database();
 const _ = db.command
+const app = getApp()
 
 Page({
 
@@ -19,44 +20,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options){
-    db.collection("test").get({
-      success:res=>{
-        console.log(res)
+    let _this =this
 
-        var items = [] 
-
-        for(var index in res.data){
-          var ii =  {
-            iconPath: "/images/loc.png",
-            id: 0,
-            latitude: 0,
-            longitude: 0,
-            width: 40,
-            height: 40,
-            label:{
-              content: '',  //文本
-              color: '#FF0202',  //文本颜色
-              borderRadius: 3,  //边框圆角
-              borderWidth: 1,  //边框宽度
-              borderColor: '#FF0202',  //边框颜色
-              bgColor: '#ffffff',  //背景色
-              padding: 5,  //文本边缘留白
-              textAlign: 'center'  //文本对齐方式。有效值: left, right, center
-              }
-          }
-          ii.id = Number(index)
-          ii.latitude = res.data[index].latitude
-          ii.longitude = res.data[index].longitude
-          ii.label.content = res.data[index].name
-          items.push(ii)
-        }
-        this.setData({
-          markers: items
-        })
-      }
+    db.collection(app.globalData.dynasty).where({
+      level:_.gt(0)
+    }).count({
+      success: function(res) {
+        _this.mapSet(res.total)
+      },
+      fail: console.error
     })
 
-    let _this =this
+
       wx.getLocation({
         type:'gcj02',
         altitude: true, //高精度定位
@@ -84,7 +59,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let _this =this
 
+    db.collection(app.globalData.dynasty).where({
+      level:_.gt(0)
+    }).count({
+      success: function(res) {
+        _this.mapSet(res.total)
+      },
+      fail: console.error
+    })
+    this.selectComponent('#sec').setData({
+      nowText:app.globalData.name
+    })
   },
 
   /**
@@ -127,5 +114,59 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail?cn=' + cn,
     })
+  },
+
+  mapSet(e){
+    // wx.showLoading({
+    //   title: '刷新中',
+    //   duration: 1000
+    // })
+    console.log(e)
+    var times = Math.ceil(e/20)
+    var addResults = []
+    var market_id = 0
+    for(var tt =0;tt<times;tt++){
+      db.collection(app.globalData.dynasty).skip(20*tt).get({
+        success:res=>{
+          console.log(res)
+          for(var index in res.data){
+            if(res.data[index].location){
+              var ii =  {
+                iconPath: "/images/loc.png",
+                id: 0,
+                latitude: 0,
+                longitude: 0,
+                width: 40,
+                height: 40,
+                label:{
+                  content: '',  //文本
+                  color: '#FF0202',  //文本颜色
+                  borderRadius: 3,  //边框圆角
+                  borderWidth: 1,  //边框宽度
+                  borderColor: '#FF0202',  //边框颜色
+                  bgColor: '#ffffff',  //背景色
+                  padding: 5,  //文本边缘留白
+                  textAlign: 'center'  //文本对齐方式。有效值: left, right, center
+                  }
+              }
+              ii.id = Number(market_id)
+              market_id = market_id+1
+              ii.latitude = res.data[index].location.latitude
+              ii.longitude = res.data[index].location.longitude
+              ii.label.content = res.data[index].old
+              addResults.push(ii)
+            }
+  
+          }
+          this.setData({
+            markers:addResults
+          })
+        }
+      })
+    }
+    console.log(this.data.markers)
+  },
+  refresh(){
+    this.onShow()
   }
 })

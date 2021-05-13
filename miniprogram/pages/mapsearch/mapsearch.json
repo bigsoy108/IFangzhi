@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Select": "/components/select/select"
+  },
+  "navigationBarTitleText": "定位搜索"
 }

@@ -2,4 +2,6 @@
 <view class="title">关于我们</view>
 <view class="content">
 乘墟待馬真君
+<image class="us" src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/观星.png"></image>
+<text>{{}}</text>
 </view>

@@ -1,9 +1,10 @@
 <!--pages/test/test.wxml-->
 <view style="width: 100%; height: 100%;">
+<Select class="ttt" id="sec" bind:re="refresh"></Select>
 <map id="myMap" style="width: 100%; height: 100%;" subkey="PUOBZ-EJKKD-MB543-HLDNB-VWGPZ-AZF5T"
          markers="{{markers}}" show-location="true" scale="8" show-compass="true" 
          longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap="mapdetail"
          bindlabeltap="mapdetail"
-         >
+>
 </map> 
 </view>

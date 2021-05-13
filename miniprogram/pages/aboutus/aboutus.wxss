@@ -18,3 +18,8 @@ page{
 .content{
   text-align: center;
 }
+
+.us{
+  width: 500rpx;
+  height: 500rpx;
+}
