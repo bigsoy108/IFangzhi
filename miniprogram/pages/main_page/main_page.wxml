@@ -1,17 +1,16 @@
 <!--pages/main_page/main_page.wxml-->
 <!-- 主页面标题 -->
-<image class='bi' src='/images/background.png' mode="aspectFill"></image>
+<image class='bi' src='/images/background.jpg' mode="aspectFill"></image>
 <view class="title">欢迎使用地方志</view>
 
 <!--两个按钮的各自导向-->
 
 <view class="main">
-    <button  bindtap="select_l" type="primary" class="button" >小程序搜索</button>
+    <button  bindtap="select_l" type="primary" class="button" >地名搜索</button>
 
-    <button  bindtap="select_r" type="primary" class="button" >地名大纲</button>
+    <button  bindtap="select_r" type="primary" class="button" >目录大纲</button>
     
-    
-    <button  bindtap="select_m" type="primary" class="button" >更多功能</button>
+    <button  bindtap="select_m" type="primary" class="button" >关于我们</button>
 
   </view>
   
