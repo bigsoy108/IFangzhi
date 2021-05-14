@@ -9,7 +9,8 @@
         "pages/morefunction/morefunction",
         "pages/aboutus/aboutus",
         "pages/workdatabase/workdatabase",
-        "pages/recommend/recommend"
+        "pages/recommend/recommend",
+        "pages/detail_recmooend/detail_recommend"
     ],
     "window": {
         "backgroundTextStyle": "light",

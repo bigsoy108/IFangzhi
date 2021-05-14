@@ -1,6 +1,7 @@
 <!--pages/detail/detail.wxml-->
   <view class="title">{{ne.old}}</view>
-  <image src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/观星.png"></image>
+  <image wx:if="{{ne.add_p}}" src="{{ne.add_p}}"></image>
+  <image wx:else src="{{p_def}}"></image>
   <view>对应现代城市：{{ne.now}}</view>
   <view>具体内容：{{ne.info}}</view>
   <view>特色：</view>

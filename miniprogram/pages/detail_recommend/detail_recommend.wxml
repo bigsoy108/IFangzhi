@@ -1,0 +1,5 @@
+<!--miniprogram/pages/detail_recmooend/detail_recommend.wxml-->
+<view class="title">{{ne.recommend}}</view>
+<view class="c">{{ne.name}}</view>
+<image src="{{ne.add_p}}"></image>
+<button bindtap="detail" type="primary" class="search_btn">查看详情</button>

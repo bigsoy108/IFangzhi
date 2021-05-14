@@ -1,7 +1,8 @@
-// miniprogram/pages/recommend/recommend.js
+// miniprogram/pages/detail_recmooend/detail_recommend.js
 // 连接云端数据库
+
 const db = wx.cloud.database();
-const app = getApp()
+const app = getApp();
 
 Page({
 
@@ -9,9 +10,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        ne:[],  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
-        cn:"",    //对应的古地名
-        dy:"",
+        ne:{},  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
+        cn:""
+        
     },
 
     /**
@@ -19,19 +20,21 @@ Page({
      */
     onLoad: function (options) {
 
-
-        //开始查询数据了  news对应的是集合的名称   
-        db.collection("special").get({
-
-            //如果查询成功的话    
-            success: res => {
-    
-            //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
-            this.setData({
-                ne: res.data
-            })
-            }
+        this.setData({
+            cn:options.cn
         })
+        console.log(this.data.cn)
+        
+       db.collection("special").where({
+           name:this.data.cn
+       }).get({
+           success:res=>{
+               console.log(res.data)
+               this.setData({
+                   ne:res.data[0]
+               })
+           }
+       }) 
 
     },
 
@@ -84,14 +87,9 @@ Page({
 
     },
 
-    click: function (option) {
-        console.log(option)
-        app.globalData.dynasty = option.currentTarget.dataset.dy
-        app.globalData.name = option.currentTarget.dataset.dyy
+    detail:function(){
         wx.navigateTo({
-          url: '/pages/detail_recommend/detail_recommend?cn=' + option.currentTarget.dataset.cn,
+          url: '/pages/detail/detail?cn=' + this.options.cn,
         })
-
-}
-
+    }
 })
