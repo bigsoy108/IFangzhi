@@ -6,7 +6,9 @@
         <view  wx:for="{{ne}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
             
             <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
-            <view data-dyy="{{item.dy}}" data-cn="{{item.name}}"   data-dy="{{item.dynasty}}"  bindtap="click"  class="sty">{{item.recommend}}</view>
+            <view data-dyy="{{item.dy}}" data-cn="{{item.name}}"   data-dy="{{item.dynasty}}"  bindtap="click"  class="sty">
+                <image src="{{item.add_p}}"></image>
+                {{item.recommend}}</view>
         </view>
     </view>
 </view>
