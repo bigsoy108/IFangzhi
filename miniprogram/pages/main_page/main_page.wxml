@@ -1,6 +1,6 @@
 <!--pages/main_page/main_page.wxml-->
 <!-- 主页面标题 -->
-<image class='bi' src='/images/tt2t.jpg' mode="aspectFill"></image>
+<image class='bi' src='/images/background.jpg' mode="aspectFill"></image>
 <view class="title">欢迎使用地方志</view>
 
 <!--两个按钮的各自导向-->
