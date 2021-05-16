@@ -1,4 +1,5 @@
 
+<image class='bi' src='cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/background/back3.png' mode="aspectFill"></image>
 <!-- 搜索框view -->
 <!-- <image class='bi' src='/images/back.jpg' mode="aspectFill"></image> -->
 <form bindsubmit="formSubmit">
