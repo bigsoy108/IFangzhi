@@ -11,7 +11,8 @@ Page({
    */
   data: {
     ne:{},  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
-    cn:""
+    cn:"",
+    p_def:"" //默认图位置
   },
 
   /**
@@ -38,6 +39,23 @@ Page({
       }
 
     })
+    
+    //判断现在的朝代选择对应的默认图
+    if(app.globalData.dynasty == "TANG"){
+      this.setData({
+        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/唐.jpg"
+      })
+    }
+    else if(app.globalData.dynasty == "SONG"){
+      this.setData({
+        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/宋.jpg"
+      })
+    }
+    else{
+      this.setData({
+        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/秦.jpg"
+      })
+    }
 
   },
 
@@ -88,5 +106,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  viewImg(e){
+    console.log(e.currentTarget.dataset)
+    wx.previewImage({
+      urls: [e.currentTarget.dataset.imgurl]
+    })
+  },
+
+  jumprelation(e){
+    wx.navigateTo({
+      url: '/pages/detail/detail?cn=' + e.currentTarget.dataset.name,
+    })
   }
 })
