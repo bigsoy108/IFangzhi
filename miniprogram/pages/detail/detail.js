@@ -36,26 +36,35 @@ Page({
         this.setData({
           ne:res.data[0]
         })
+        if(this.data.ne.add_p){
+          this.setData({
+            p_def:this.data.ne.add_p
+          })
+        }else{
+              //判断现在的朝代选择对应的默认图
+          if(app.globalData.dynasty == "TANG"){
+            this.setData({
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/唐.jpg"
+            })
+          }
+          else if(app.globalData.dynasty == "SONG"){
+            this.setData({
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/宋.jpg"
+            })
+          }
+          else{
+            this.setData({
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/秦.jpg"
+            })
+          }
+        }
       }
 
     })
     
-    //判断现在的朝代选择对应的默认图
-    if(app.globalData.dynasty == "TANG"){
-      this.setData({
-        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/唐.jpg"
-      })
-    }
-    else if(app.globalData.dynasty == "SONG"){
-      this.setData({
-        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/宋.jpg"
-      })
-    }
-    else{
-      this.setData({
-        p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/秦.jpg"
-      })
-    }
+
+    
+
 
   },
 

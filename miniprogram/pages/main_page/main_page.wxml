@@ -11,6 +11,6 @@
     <button  bindtap="select_r" type="primary" class="button" >目录大纲</button>
     
     <button  bindtap="select_m" type="primary" class="button" >关于我们</button>
-
   </view>
+
   
