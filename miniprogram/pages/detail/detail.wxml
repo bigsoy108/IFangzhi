@@ -7,5 +7,10 @@
   <view>特色：</view>
   <view wx:if="{{ne.mingren}}">名人：{{ne.mingren}}</view>
   <view wx:if="{{ne.building}}">建筑：{{ne.building}}</view>
+  <block wx:if="{{ne.relation}}">
+    <text>关联地区：</text>
+    <text wx:for="{{ne.relation}}" bindtap="jumprelation" data-name="{{item}}">{{item}}</text>
+  </block>
+
 
 

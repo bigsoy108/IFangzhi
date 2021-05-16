@@ -113,5 +113,11 @@ Page({
     wx.previewImage({
       urls: [e.currentTarget.dataset.imgurl]
     })
+  },
+
+  jumprelation(e){
+    wx.navigateTo({
+      url: '/pages/detail/detail?cn=' + e.currentTarget.dataset.name,
+    })
   }
 })
