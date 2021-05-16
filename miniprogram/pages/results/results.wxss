@@ -23,7 +23,7 @@ background-size: 100% 100%;
 }
 .ttt{
   line-height: 56rpx;
-  width:16%;
+  width:20%;
   height: 40rpx;
   z-index: 300;
 }
@@ -64,6 +64,8 @@ background-size: 100% 100%;
   width: 80%;
   margin:20rpx auto;
   z-index:10;
+  text-align: center;
+  color:grey;
 }
 
 .weui-search-bar {

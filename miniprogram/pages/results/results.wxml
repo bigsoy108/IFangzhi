@@ -20,6 +20,6 @@
   <view class="tiaomu1"  wx:for="{{results}}" data-cn="{{item.old}}" bindtap="click">今-{{item.now}}||古-{{item.old}}</view>
 </block>
 <block  wx:else>
-  <view class="tiaomu2">没有找到</view>
+  <view class="tiaomu2">没有找到相应结果</view>
 </block>
 </view>
