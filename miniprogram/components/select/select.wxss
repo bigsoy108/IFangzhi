@@ -1,13 +1,5 @@
 
 
-.com-sImg{
-  position: absolute;
-  right: 40rpx;
-  top: 25rpx;
-  width: 40rpx;
-  height: 35rpx;
-  transition: all .3s ease;
-}
 .com-sTxt{
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23,6 +15,7 @@
   padding: 0 18rpx;
   text-align: left;
   overflow: hidden;
+  text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 35rpx;

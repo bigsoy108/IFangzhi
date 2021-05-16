@@ -4,7 +4,6 @@
 <map id="myMap" style="width: 100%; height: 100%;" subkey="PUOBZ-EJKKD-MB543-HLDNB-VWGPZ-AZF5T"
          markers="{{markers}}" show-location="true" scale="8" show-compass="true" 
          longitude="{{longitude}}" latitude="{{latitude}}" bindmarkertap="mapdetail"
-         bindlabeltap="mapdetail"
->
+         bindlabeltap="mapdetail">
 </map> 
 </view>

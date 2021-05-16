@@ -106,5 +106,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  viewImg(e){
+    console.log(e.currentTarget.dataset)
+    wx.previewImage({
+      urls: [e.currentTarget.dataset.imgurl]
+    })
   }
 })

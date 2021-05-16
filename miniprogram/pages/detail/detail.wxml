@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
   <view class="title">{{ne.old}}</view>
-  <image wx:if="{{ne.add_p}}" src="{{ne.add_p}}"></image>
-  <image wx:else src="{{p_def}}"></image>
+  <image wx:if="{{ne.add_p}}" src="{{ne.add_p}}" bindtap="viewImg" data-imgurl="{{ne.add_p}}"></image>
+  <image wx:else src="{{p_def}}" bindtap="viewImg" data-imgurl="{{p_def}}"></image>
   <view>对应现代城市：{{ne.now}}</view>
   <view>具体内容：{{ne.info}}</view>
   <view>特色：</view>
