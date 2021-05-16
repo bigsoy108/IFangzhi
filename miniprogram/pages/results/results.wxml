@@ -1,5 +1,6 @@
 
 <!-- 搜索框view -->
+<!-- <image class='bi' src='/images/back.jpg' mode="aspectFill"></image> -->
 <form bindsubmit="formSubmit">
   <view class="weui-search-bar">
     <Select id="sec" bind:re="refresh" class="ttt" com-sContent="tyy"></Select>
@@ -16,9 +17,9 @@
 </form>
 <view class="cont">
 <block wx:if="{{results.length>0}}">
-  <view class="tiaomu" wx:for="{{results}}" data-cn="{{item.old}}" bindtap="click">今-{{item.now}}||古-{{item.old}}</view>
+  <view class="tiaomu1"  wx:for="{{results}}" data-cn="{{item.old}}" bindtap="click">今-{{item.now}}||古-{{item.old}}</view>
 </block>
 <block  wx:else>
-  <view class="tiaomu">没有找到</view>
+  <view class="tiaomu2">没有找到</view>
 </block>
 </view>
