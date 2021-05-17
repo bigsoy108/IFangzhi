@@ -40,6 +40,7 @@ page{
   line-height: 80rpx;
   /* border-radius:20rpx; */
   padding:0;
+  font-size:36rpx;
   background-image: radial-gradient(circle at right top, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
   radial-gradient(circle at right bottom, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
   radial-gradient(circle at left bottom, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
@@ -54,6 +55,7 @@ page{
   width: 93%;
   position: absolute;
   top: 130rpx;
+ 
   z-index: 1;
   overflow: hidden;
   animation: myfirst 0.5s;

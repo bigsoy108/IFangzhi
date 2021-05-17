@@ -29,6 +29,7 @@ page{
 }
 
 .contentborder{
+  font-size:32rpx;
   border:8rpx solid rgba(0, 0, 0, 0.1);
   border-radius: 5%;
   padding:20rpx;
