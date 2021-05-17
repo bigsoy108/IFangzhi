@@ -9,8 +9,8 @@
 }
 
 .com-sItem{
-  height: 30px;
-  line-height: 30px;
+  height: 65rpx;
+  line-height: 65rpx;
   border-top: 5rpx solid #e2e2e2;
   padding: 0 18rpx;
   text-align: left;

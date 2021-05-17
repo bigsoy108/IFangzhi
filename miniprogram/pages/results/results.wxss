@@ -32,9 +32,11 @@ page{
 .ttt image{
   width:30rpx;
   top:16rpx;
-  left:50rpx;
+  left:70rpx;
 }
-
+.com-sList{
+  width:120rpx
+}
 .com-sContent{
   border: 5rpx solid #e2e2e2;
   background: white;
