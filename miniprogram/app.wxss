@@ -38,7 +38,7 @@
   border-top: none;
   box-sizing: border-box;
   z-index: 3;
-  max-height: 120px;
+  max-height: 240rpx;
   overflow: auto;
 }
 
