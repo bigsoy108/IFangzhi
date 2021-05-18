@@ -33,12 +33,12 @@
   background: white;
   width: 100rpx;
   position: absolute;
-  border: 1px solid #e2e2e2;
+  border: 2rpx solid #e2e2e2;
   border-radius: 8rpx;
   border-top: none;
   box-sizing: border-box;
   z-index: 3;
-  max-height: 120px;
+  max-height: 240rpx;
   overflow: auto;
 }
 

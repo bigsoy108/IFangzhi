@@ -44,17 +44,17 @@ Page({
               //判断现在的朝代选择对应的默认图
           if(app.globalData.dynasty == "TANG"){
             this.setData({
-              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/唐.jpg"
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/唐.png"
             })
           }
           else if(app.globalData.dynasty == "SONG"){
             this.setData({
-              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/宋.jpg"
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/宋.png"
             })
           }
           else{
             this.setData({
-              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/秦.jpg"
+              p_def:"cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/秦.png"
             })
           }
         }

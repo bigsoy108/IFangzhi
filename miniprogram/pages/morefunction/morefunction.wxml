@@ -1,10 +1,16 @@
 <!--miniprogram/pages/morefunction.wxml-->
+
+<view class="bg"></view>
+<view class="fangzhi">
+  <image src="/images/fangzhi.png" class="fzimg"></image>
+  <view class="txt"><text>方志是以一定体例，全面系统地记述一定区域各个方面或一个方面历史与现状的资料性文献，最早见于《周官》，指的是方国情况的记述。宋以后，这一名称固定为地方文献的专用名词之一。</text></view>
+</view>
 <view class="main">
 
-<button  bindtap="to_aboutus" type="primary" class="button">关于我们</button>
+<button  bindtap="to_aboutus" type="primary" class="tbutton">关于我们</button>
 
-<button  bindtap="to_database" type="primary" class="button">开发日志</button>
+<button  bindtap="to_database" type="primary" class="tbutton">开发日志</button>
 
-<button   type="primary" class="button" open-type="feedback">意见反馈</button>
+<button   type="primary" class="tbutton" open-type="feedback">意见反馈</button>
 
 </view>

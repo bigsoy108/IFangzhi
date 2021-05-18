@@ -1,7 +1,15 @@
 <!--miniprogram/pages/aboutus/aboutus.wxml-->
-<view class="title">关于我们</view>
+
+<image class="us" src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/background/about03.jpg"></image>
+<view class="title">乘墟待馬真君</view>
+<view class="contentborder">
 <view class="content">
-乘墟待馬真君
-<image class="us" src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/观星.png"></image>
-<text>{{}}</text>
+<text>本团队由四位南开大学软件学院的学生成立。由于组内大家对历史地理方面的内容很感兴趣，团队以传统地方志为原型制作了该项目——古代地方志。</text>
+</view>
+<view class="content">
+<text>本项目主打古今对比，强调现代地方城市和古代郡县的关系，旨在为对历史地理感兴趣的朋友提供一个简单的百科词典，同时给不了解地方志文化的朋友们做一些入门科普。</text>
+</view>
+<view class="content">
+<text>由于能力有限，本项目收录的词条信息均来源于网络且数量还有待扩充，如果描述出现错误或者您有任何意见和建议，可以通过联系客服以及意见反馈功能与我们联系。</text>
+</view>
 </view>
