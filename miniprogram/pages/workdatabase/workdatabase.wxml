@@ -1,2 +1,2 @@
 
-<view class="tiaomu" wx:for="{{results}}">时间：{{item.time}}  {{item.work}}</view>
+<view class="tiaomu" wx:for="{{results}}"><text space="ensp">{{item.time}}    {{item.work}}</text></view>

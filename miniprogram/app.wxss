@@ -33,7 +33,7 @@
   background: white;
   width: 100rpx;
   position: absolute;
-  border: 1px solid #e2e2e2;
+  border: 2rpx solid #e2e2e2;
   border-radius: 8rpx;
   border-top: none;
   box-sizing: border-box;
