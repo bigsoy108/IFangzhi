@@ -1,15 +1,46 @@
 <!--pages/detail/detail.wxml-->
   <view class="title">{{ne.old}}</view>
-  <image src="{{p_def}}" bindtap="viewImg" data-imgurl="{{p_def}}"></image>
-  <view>对应现代城市：{{ne.now}}</view>
-  <view>具体内容：{{ne.info}}</view>
-  <view>特色：</view>
-  <view wx:if="{{ne.mingren}}">名人：{{ne.mingren}}</view>
-  <view wx:if="{{ne.building}}">建筑：{{ne.building}}</view>
-  <block wx:if="{{ne.relation}}">
-    <text>关联地区：</text>
-    <text wx:for="{{ne.relation}}" bindtap="jumprelation" data-name="{{item}}">{{item}}</text>
-  </block>
+  <view class="container">
+    <view class="divLine"></view>
+   </view>
+  <view class="pic">
+      <image src="{{p_def}}" bindtap="viewImg" data-imgurl="{{p_def}}"></image>
+  </view>
+  <view class="container">
+    <view class="divLine"></view>
+   </view>
+     <view class="t1">对应城市：</view>
+     <view class="text">{{ne.now}}</view>
+     <view class="container">
+    <view class="divLine"></view>
+   </view>
+     <view class="t1">{{ne.old}}史录:</view>
+  <view class="text">{{ne.info}}</view>
+  <view class="container">
+    <view class="divLine"></view>
+   </view>
+  <view wx:if="{{ne.mingren}}" ><view class="t1">名人：</view>
+      <view class="text">{{ne.mingren}}</view>
+      <view class="container">
+    <view class="divLine"></view>
+   </view>
+    </view>
+  <view wx:if="{{ne.building}}"><view class="t1">地标建筑</view>
+    <view class="text">{{ne.building}}</view>
+    <view class="container">
+    <view class="divLine"></view>
+   </view>
+  </view>
+   <block wx:if="{{ne.relation}}">
+     <text class="t1">关联地区：</text>
+     <view class="relation">
+     <text wx:for="{{ne.relation}}" bindtap="jumprelation" data-name="{{item}}"> {{item}}</text>
+    </view>
+    <view class="container">
+    <view class="divLine"></view>
+   </view>
+   </block>
+  
 
 
 
