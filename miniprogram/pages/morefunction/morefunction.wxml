@@ -1,4 +1,6 @@
 <!--miniprogram/pages/morefunction.wxml-->
+
+<view class="bg"></view>
 <view class="fangzhi">
   <image src="/images/fangzhi.png" class="fzimg"></image>
   <view class="txt"><text>方志是以一定体例，全面系统地记述一定区域各个方面或一个方面历史与现状的资料性文献，最早见于《周官》，指的是方国情况的记述。宋以后，这一名称固定为地方文献的专用名词之一。</text></view>
