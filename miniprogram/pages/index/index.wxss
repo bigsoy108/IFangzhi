@@ -3,39 +3,148 @@ page{
   height: 100%;
 }
 
+.bi{
+  height : 100%;
+  position: absolute;
+  width: 100%;
+  left: 0rpx;
+  top: 0rpx;
+  z-index:-2;
+}
+
 .title{
-  margin: 100rpx auto 0;
+  margin: 8% auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50rpx;
+  font-size: 70rpx;
   font-weight:bold;
+  z-index:100;
   height: 20%;
 }
 
+.cont{
+  margin-top: 100rpx;
+  margin-left:-50rpx;
+  z-index: 200;
+}
+.ttt{
+  line-height: 56rpx;
+  width:24%;
+  height: 100%;
+  z-index: 300;
+}
+
+.com-selectBox{
+  width: 100%;
+  margin-left: 2rpx;
+  z-index: 10;
+  height: 60rpx;
+}
+.ttt image{
+  width:30rpx;
+  top:16rpx;
+  left:60rpx;
+}
+.com-sList{
+  margin-top:20rpx;
+  width:100rpx;
+  z-index: 1000;
+}
+.com-sContent{
+  border: none;
+  border-right:5rpx solid #e2e2e2;
+  background: white;
+  font-size: 50rpx;
+  position: relative;
+  top:4rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.weui-search-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  width:84%;
+  height:70rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 20rpx;
+  top: 18rpx;
+}
+.weui-search-bar__form {
+  width: 300rpx;
+  border-radius: 10rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+  width: 100%;
+
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+}
+.weui-search-bar__cancel-btn {
+  background: rgba(0,0,0,0);
+  font-size: 31rpx;
+  /* margin-left: 20rpx; */
+  padding:0;
+  width:90rpx !important;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #5d7599;
+  white-space: nowrap; 
+}
+.weui-search-bar__cancel-btn image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.formview{
+  margin:auto;
+  display: inline;
+}
 
 .search_con{
-  width: 80%;
-  margin:40rpx auto;
+  width: 84%;
+  margin:120rpx auto;
+  z-index:-1;
 }
 
-.search_con .search_input{
-  border: 2rpx solid rgb(214, 211, 211);
-  height: 90rpx;
-  border-radius: 200rpx;
-  font-size: 34rpx;
-  padding-left: 30rpx;/*此处要用padding-left才可以把光标往右移动15像素，不可以用text-indent*/
-  color: #333;
-}
 
 .search_con .search_btn{
+
+  z-index: inherit; 
   margin-top: 50rpx;
   width: 100%;
   height: 80rpx;
-  background: #5d7599 !important;
+  background-color: #5d7599 !important;
   color: #fff;
-  border-radius: 200rpx;
+  line-height: 80rpx;
+  padding:0;
+  font-size:36rpx;
+  background-image: radial-gradient(circle at right top, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
+  radial-gradient(circle at right bottom, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
+  radial-gradient(circle at left bottom, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
+  radial-gradient(circle at left top, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx);
 }
+
+
 
 
 

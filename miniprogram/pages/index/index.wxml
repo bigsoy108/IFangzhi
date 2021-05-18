@@ -1,23 +1,30 @@
-<view>
-<Select id="sec" >
-</Select>
+<image class='bi' src='/images/background.jpg' mode="aspectFill"></image>
+<!-- <view class="daohang">
 <button open-type='contact' class="csb">
-        <image src="/images/cs.png"  class="csimg"></image>
+        <image src="/images/cs.png"></image>
 </button> 
-</view>
+</view> -->
 <!-- 标题 -->
-<view class="title">小程序搜索{{array[0].target}}</view>
+<view class="title">古代地方志</view>
+<form bindsubmit="formSubmit1">
+  <view class="weui-search-bar">
+    <Select id="sec" bind:re="refresh" class="ttt" ></Select>
 
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <input name="keyword" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" value="{{keyword}}" bindconfirm="formSubmit2"/>
+                </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+           <button class="weui-search-bar__cancel-btn" form-type="submit"><image formType="submit" src="/images/search.png" ></image></button>
 
-<!-- 搜索框view -->
+        </view>
+        <!-- 搜索框view -->
 <view class="search_con">
-
-<!-- 表单 -->
-<form bindsubmit="formSubmit">
-  <!-- 记得设置name值，这样JS才能接收name=keyword的值 -->
-    <input type="text" name="keyword" class="search_input" placeholder='请输入要找的地名' value="{{keyword}}"/>
-    <button formType="submit" type="primary" class="search_btn">搜索</button>  
-</form>
   <button bindtap="maps" type="primary" class="search_btn">定位搜索</button>  
   <button bindtap="recommend" type="primary" class="search_btn">特色推荐</button>  
 </view>
+  </form>
+
+
+
+

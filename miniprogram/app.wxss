@@ -20,15 +20,7 @@
   height: 35rpx;
   transition: all .3s ease;
 }
-.csb{
-  margin-top: -70rpx;
-  position:fixed;
-  right: 50rpx;
-  display:flex;
-  width:200rpx !important;
-  padding:0;
-  justify-content:center;
-}
+
 .com-sList{
   background: white;
   width: 100rpx;
@@ -42,10 +34,7 @@
   overflow: auto;
 }
 
-.csb image{
-  width:70rpx;
-  height:60rpx;
-}
+
 
 .container {
   display: flex;

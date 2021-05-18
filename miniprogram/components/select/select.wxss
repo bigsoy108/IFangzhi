@@ -19,6 +19,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 35rpx;
+  z-index:100;
 }
 .com-sItem:first-child{
   border-top: none;

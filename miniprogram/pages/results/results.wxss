@@ -39,6 +39,7 @@ page{
 }
 .com-sContent{
   border: 5rpx solid #e2e2e2;
+  border-radius: 10rpx;
   background: white;
   font-size: 50rpx;
   position: relative;

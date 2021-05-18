@@ -156,11 +156,24 @@ Page({
     })
 
   },
-  formSubmit: function (e) {
+  formSubmit1: function (e) {
     //获取表单所有name=keyword的值
+    
     this.setData({
       kw:e.detail.value.keyword
     })
+    this.Searchnavigation()
+  },
+  formSubmit2: function (e) {
+    //获取表单所有name=keyword的值
+    
+    this.setData({
+      kw:e.detail.value
+    })
+    this.Searchnavigation()
+
+  },
+  Searchnavigation(){
     var pages = getCurrentPages()
     var currPage = pages[pages.length - 2]
     currPage.setData({
@@ -190,8 +203,8 @@ Page({
         }) 
       }
     
-
   },
+
   refresh: function(e){
     this.onShow()
   },

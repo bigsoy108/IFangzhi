@@ -11,7 +11,7 @@ page{
 }
 
 .fangzhi{
-  margin:5% 5% 0;
+  margin:5% auto 0;
   background-color: #fff;
   border:6rpx solid #e2e2e2;
   display:flex;           

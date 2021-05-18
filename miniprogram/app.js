@@ -5,7 +5,7 @@ App({
     dynasty : "",
     selectArray: [
     ],
-    name:""
+    name:"唐"
   },
   onLaunch: function () {
     var that =this

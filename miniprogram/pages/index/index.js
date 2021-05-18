@@ -14,6 +14,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.cloud.database().collection("List").get({
+      success:res=>{
+        getApp().globalData.selectArray = res.data
+        getApp().globalData.dynasty = res.data[0].target
+        getApp().globalData.name = res.data[0].text
+      }
+    })
   },
 
   /**
@@ -65,40 +72,49 @@ Page({
   onShareAppMessage: function () {
     
   },
-    //执行点击事件
-    formSubmit: function (e) {
-
-  
+    formSubmit1: function (e) {
       //获取表单所有name=keyword的值
+
+      
       this.setData({
         keyword:e.detail.value.keyword
       })
-
+      this.Searchnavigation()
+    },
+    formSubmit2: function (e) {
+      //获取表单所有name=keyword的值
+      
+      //获取表单所有name=keyword的值
+      this.setData({
+        keyword:e.detail.value
+      })
+      this.Searchnavigation()
+  
+    },
+    Searchnavigation(){
       if(this.data.keyword) {  
         
-      wx.navigateTo({
-        url: '/pages/results/results?kw='+this.data.keyword
-      })
+        wx.navigateTo({
+          url: '/pages/results/results?kw='+this.data.keyword
+        })
+    
+        //显示搜索中的提示
+        wx.showLoading({
+          title: '搜索中',
+          icon: 'loading'
+        })
   
-      //显示搜索中的提示
-      wx.showLoading({
-        title: '搜索中',
-        icon: 'loading'
-      })
-
-      setTimeout(function () {
-        wx.hideLoading()
-      }, 2000)      
-      }else{
-          wx.showToast({
-            title: '输入不能为空',
-            icon: 'none',
-            duration: 2000
-        }) 
-      }
-
+        setTimeout(function () {
+          wx.hideLoading()
+        }, 2000)      
+        }else{
+            wx.showToast({
+              title: '输入不能为空',
+              icon: 'none',
+              duration: 2000
+          }) 
+        }
       
-
     },
 
 maps: function(){
