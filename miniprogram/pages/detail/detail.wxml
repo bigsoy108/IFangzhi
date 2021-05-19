@@ -34,12 +34,15 @@
    <block wx:if="{{ne.relation}}">
      <text class="t1">关联地区：</text>
      <view class="relation">
-     <text wx:for="{{ne.relation}}" bindtap="jumprelation" data-name="{{item}}"> {{item}}</text>
+     <text class="relurl" wx:for="{{ne.relation}}" bindtap="jumprelation" data-name="{{item}}">{{item}}</text>
     </view>
     <view class="container">
     <view class="divLine"></view>
    </view>
    </block>
+    <view class="tip">
+<text>数据及图片均来源于网络，如果存在问题请通过意见反馈功能与我们联系。</text>
+</view>
   
 
 

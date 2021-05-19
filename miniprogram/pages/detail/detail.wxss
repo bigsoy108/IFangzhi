@@ -68,12 +68,27 @@ page{
  }
 
 .relation{
-  color: rgb(19,110,194);
+  color:#D9E5F2;
   margin-top: 20rpx;
-  text-indent: 56rpx;
-  font-size: 28rpx;
-  letter-spacing: 3rpx;
-  text-decoration: underline;
+  margin-left: 56rpx;
+  font-size: 26rpx;
+  /* letter-spacing: 3rpx; */
+  /* text-decoration: underline; */
   margin-bottom: 40rpx;
+}
+
+.tip{
+  width: 80%;
+  margin:0 auto;
+  text-align: center;
+  font-size:26rpx;
+  color:#C0C0C0;
+}
+.relurl{
+  padding:6rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  background-color: #5d7599;
+  margin-right: 4rpx;
 }
 
