@@ -19,20 +19,17 @@ page{
   justify-content: center;
   font-size: 70rpx;
   font-weight:bold;
-  z-index:100;
   height: 20%;
 }
 
 .cont{
   margin-top: 100rpx;
   margin-left:-50rpx;
-  z-index: 200;
 }
 .ttt{
   line-height: 56rpx;
   width:24%;
   height: 100%;
-  z-index: 300;
 }
 
 .com-selectBox{
@@ -49,7 +46,6 @@ page{
 .com-sList{
   margin-top:20rpx;
   width:100rpx;
-  z-index: 1000;
 }
 .com-sContent{
   border: none;
@@ -90,9 +86,7 @@ page{
   padding-left: 20rpx;
   padding-right: 30rpx;
   width: 100%;
-
   box-sizing: border-box;
-  z-index: 1;
 }
 .weui-search-bar__input {
   height: 70rpx;
@@ -102,7 +96,6 @@ page{
 .weui-search-bar__cancel-btn {
   background: rgba(0,0,0,0);
   font-size: 31rpx;
-  /* margin-left: 20rpx; */
   padding:0;
   width:90rpx !important;
   height: 70rpx;
@@ -123,13 +116,10 @@ page{
 .search_con{
   width: 84%;
   margin:130rpx auto;
-  z-index:-1;
 }
 
 
 .search_con .search_btn{
-
-  z-index: inherit; 
   margin-top: 50rpx;
   width: 100%;
   height: 80rpx;
@@ -137,6 +127,8 @@ page{
   color: #fff;
   line-height: 80rpx;
   padding:0;
+  text-align: center;
+  font-weight: 700;
   font-size:36rpx;
   background-image: radial-gradient(circle at right top, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
   radial-gradient(circle at right bottom, #b9c9ed, #b9c9ed 14rpx, transparent 16rpx),
