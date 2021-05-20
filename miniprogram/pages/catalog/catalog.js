@@ -14,13 +14,17 @@ Page({
     select: false,
     tihuoWay: '全部',
     classi: "",
+    animationData:{},
+    imgname:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      imgname:getApp().globalData.name
+    })
 
     //开始查询数据了  news对应的是集合的名称   
     db.collection(app.globalData.dynasty).get({
@@ -32,6 +36,7 @@ Page({
         this.setData({
           ne: res.data
         })
+        console.log(res.data)
       }
     })
 
@@ -48,6 +53,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setData({
+      imgname:getApp().globalData.name
+    })
     var classi = this.data.classi
     console.log(classi)
     if(classi==0){
@@ -203,7 +211,16 @@ Page({
 
 
   bindShowMsg(){
+    var animation = wx.createAnimation({
+      timingFunction:"ease"
+    })
+    if(this.data.select){
+      animation.rotate(0).step(); 
+    }else{
+      animation.rotate(180).step(); 
+    }
     this.setData({
+      animationData: animation.export(),
       select: !this.data.select
     })
   },
@@ -211,10 +228,15 @@ Page({
   mySelect(e){
     var name = e.currentTarget.dataset.name
     var cl = e.currentTarget.dataset.cl
+    var animation = wx.createAnimation({
+      timingFunction:"ease"
+    })
+    animation.rotate(0).step(); 
     this.setData({
       tihuoWay: name,
       select:false,
-      classi: cl
+      classi: cl,
+      animationData: animation.export(),
     })
     this.onShow()
 

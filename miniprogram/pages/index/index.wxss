@@ -1,6 +1,7 @@
 /* 搜索样式 */
 page{
   height: 100%;
+  background-color: rgb(241, 241, 241);
 }
 
 .bi{
@@ -27,7 +28,6 @@ page{
   margin-left:-50rpx;
 }
 .ttt{
-  line-height: 56rpx;
   width:24%;
   height: 100%;
 }
@@ -35,7 +35,6 @@ page{
 .com-selectBox{
   width: 100%;
   margin-left: 2rpx;
-  z-index: 10;
   height: 60rpx;
 }
 .ttt image{

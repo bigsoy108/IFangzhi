@@ -1,24 +1,26 @@
 <!--pages/catalog/catalog.wxml-->
 
-<view>
+<view class="daohang">
     <Select id="sec" bind:re="refresh" class="ttt"></Select>
-</view>
-<view class="list-msg">
-    <view class="list-msg2" bindtap="bindShowMsg">
+    <view class="list-msg"  bindtap="bindShowMsg">
+    <view class="list-msg2">
         <text>{{tihuoWay}}</text>
     </view>
+    <image src='/images/down.png'  class='sImg'  animation="{{animationData}}"></image>
 </view>
 <view class="select_box" wx:if="{{select}}">
     <view class="select_one" bindtap="mySelect"  data-name="全部" data-cl="0">全部</view>
     <view class="select_one" bindtap="mySelect"  data-name="省级" data-cl="1">省级</view>
-    <view class="select_one" bindtap="mySelect"  data-name="市级" data-cl="2">市级</view>
+    <view class="select_one" bindtap="mySelect"  data-name="其他" data-cl="2">其他</view>
+</view>
 </view>
 
-
 <view class="city_name">
-<view  wx:for="{{ne}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
+<view  wx:for="{{ne}}" class="itembox"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
     
     <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
+    <image wx:if="{{item.add_p}}" src="{{item.add_p}}" class="item-img"></image>
+    <image wx:else src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/{{imgname}}.png" class="item-img"></image>
     <view data-cn="{{item.old}}" bindtap="click"  class="sty">{{item.old}}</view>
 </view>
 </view>
