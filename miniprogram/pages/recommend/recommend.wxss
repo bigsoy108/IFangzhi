@@ -3,6 +3,7 @@ page{
     height: 100%;
     width: 90%;
     margin:0 auto;
+    background-color:#eeeeee;
 }
 
 .title{
@@ -29,5 +30,23 @@ flex-direction:column;
 }
 
 .sty{
-    margin-bottom: 40rpx;
-}
+    border-top:2rpx solid #e2e2e2;
+    margin:0 auto;
+    font-size:35rpx;
+    text-align: center;
+    width:100%;
+    line-height:75rpx
+  }
+  .item-img{
+    width:500rpx;
+    height:375rpx;
+    margin:auto;
+  }
+  .box{
+    margin:0 auto 10rpx;
+      width:600rpx;
+      border:2rpx solid #e2e2e2;
+      background-color: white ;
+      border-radius: 3rpx;
+
+  }
