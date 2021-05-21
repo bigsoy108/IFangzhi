@@ -84,6 +84,7 @@ page{
   z-index: 3;
   max-height: 240rpx;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .select_one{

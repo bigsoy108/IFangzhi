@@ -1,7 +1,6 @@
 /* pages/results/results.wxss */
 page{
   height: 100%;
-  background-color: rgb(241, 241, 241);
 }
 
 .bi{

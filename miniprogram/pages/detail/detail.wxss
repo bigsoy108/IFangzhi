@@ -84,5 +84,6 @@ page{
   text-align: center;
   background-color: #5d7599;
   margin-right: 4rpx;
+  color:#ffffff;
 }
 

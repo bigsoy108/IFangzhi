@@ -2,6 +2,7 @@
 // 连接云端数据库
 const db = wx.cloud.database();
 const app = getApp()
+var classi = 0
 
 Page({
 
@@ -13,7 +14,6 @@ Page({
     cn:"",    //对应的古地名
     select: false,
     tihuoWay: '全部',
-    classi: "",
     animationData:{},
     imgname:""
   },
@@ -55,7 +55,6 @@ Page({
     this.setData({
       imgname:getApp().globalData.name
     })
-    var classi = this.data.classi
     if(classi==0){
       db.collection(app.globalData.dynasty).get({
 
@@ -136,7 +135,6 @@ Page({
       title: '刷新中',
       duration: 1000
     })
-    var classic = this.data.classi
     var x = this.data.ne.length
     var old_data = this.data.ne
     if(classic == 0){
@@ -221,7 +219,7 @@ Page({
 
   mySelect(e){
     var name = e.currentTarget.dataset.name
-    var cl = e.currentTarget.dataset.cl
+    classi = e.currentTarget.dataset.cl
     var animation = wx.createAnimation({
       timingFunction:"ease"
     })
@@ -229,7 +227,6 @@ Page({
     this.setData({
       tihuoWay: name,
       select:false,
-      classi: cl,
       animationData: animation.export(),
     })
     this.onShow()
