@@ -31,6 +31,18 @@
     <view class="divLine"></view>
    </view>
   </view>
+  <view wx:if="{{ne.event}}"><view class="t1">历史事件：</view>
+    <view class="text">{{ne.event}}</view>
+    <view class="container">
+    <view class="divLine"></view>
+   </view>
+  </view>
+  <view wx:if="{{ne.idiom}}"><view class="t1">成语：</view>
+    <view class="text">{{ne.idiom}}</view>
+    <view class="container">
+    <view class="divLine"></view>
+   </view>
+  </view>
    <block wx:if="{{ne.relation}}">
      <text class="t1">关联地区：</text>
      <view class="relation">

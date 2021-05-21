@@ -137,7 +137,7 @@ Page({
     })
     var x = this.data.ne.length
     var old_data = this.data.ne
-    if(classic == 0){
+    if(classi == 0){
       db.collection(app.globalData.dynasty).skip(x).get({
 
         //如果查询成功的话    
@@ -150,7 +150,7 @@ Page({
         }
       })
     }
-    if(classic == 1){
+    if(classi == 1){
       db.collection(app.globalData.dynasty).skip(x).where({
         level: 1
       }).get({
@@ -165,7 +165,7 @@ Page({
         }
       })
     }
-    if(classic == 2){
+    if(classi == 2){
       db.collection(app.globalData.dynasty).skip(x).where({
         level: 2
       }).get({
