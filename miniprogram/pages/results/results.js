@@ -152,7 +152,6 @@ Page({
   },
   formSubmit1: function (e) {
     //获取表单所有name=keyword的值
-    
     this.setData({
       kw:e.detail.value.keyword
     })
@@ -188,7 +187,7 @@ Page({
 
       setTimeout(function () {
         wx.hideLoading()
-      }, 1000)      
+      }, 2000)      
       }else{
           wx.showToast({
             title: '输入不能为空',
