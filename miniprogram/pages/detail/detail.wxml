@@ -25,7 +25,7 @@
     <view class="divLine"></view>
    </view>
     </view>
-  <view wx:if="{{ne.building}}"><view class="t1">地标建筑</view>
+  <view wx:if="{{ne.building}}"><view class="t1">地标建筑：</view>
     <view class="text">{{ne.building}}</view>
     <view class="container">
     <view class="divLine"></view>

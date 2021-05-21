@@ -1,5 +1,4 @@
 
-
 .com-sTxt{
   overflow: hidden;
   text-overflow: ellipsis;

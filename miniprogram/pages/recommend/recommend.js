@@ -85,13 +85,11 @@ Page({
     },
 
     click: function (option) {
-        console.log(option)
         app.globalData.dynasty = option.currentTarget.dataset.dy
         app.globalData.name = option.currentTarget.dataset.dyy
         wx.navigateTo({
             url: '/pages/detail/detail?cn=' + option.currentTarget.dataset.cn,
         })
-
 }
 
 })

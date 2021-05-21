@@ -23,8 +23,6 @@ Page({
     this.setData({
       cn:options.cn
     })
-    console.log(this.data.cn)
-
      
     db.collection(app.globalData.dynasty).where(
       {
@@ -32,7 +30,6 @@ Page({
       }
     ).get({
       success:res=>{
-        console.log(res.data)
         this.setData({
           ne:res.data[0]
         })
@@ -118,7 +115,6 @@ Page({
   },
 
   viewImg(e){
-    console.log(e.currentTarget.dataset)
     wx.previewImage({
       urls: [e.currentTarget.dataset.imgurl]
     })

@@ -6,16 +6,6 @@ page{
     background-color:#eeeeee;
 }
 
-.title{
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 50rpx;
-font-weight:bold;
-height: 8%;
-}
-
 .content{
 text-align: center;
 }
@@ -38,8 +28,8 @@ flex-direction:column;
     line-height:75rpx
   }
   .item-img{
-    width:500rpx;
-    height:375rpx;
+    width:540rpx;
+    height:405rpx;
     margin:auto;
   }
   .box{
@@ -47,6 +37,6 @@ flex-direction:column;
       width:600rpx;
       border:2rpx solid #e2e2e2;
       background-color: white ;
-      border-radius: 3rpx;
+      border-radius: 20rpx;
 
   }

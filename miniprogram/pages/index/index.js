@@ -106,12 +106,12 @@ Page({
   
         setTimeout(function () {
           wx.hideLoading()
-        }, 2000)      
+        }, 1000)      
         }else{
             wx.showToast({
               title: '输入不能为空',
               icon: 'none',
-              duration: 2000
+              duration: 1000
           }) 
         }
       

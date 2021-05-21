@@ -107,11 +107,6 @@ page{
   height: 70rpx;
 }
 
-.formview{
-  margin:auto;
-  display: inline;
-}
-
 .search_con{
   width: 84%;
   margin:130rpx auto;

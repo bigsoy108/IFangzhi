@@ -26,7 +26,7 @@ Page({
       imgname:getApp().globalData.name
     })
 
-    //开始查询数据了  news对应的是集合的名称   
+    //开始查询数据了 
     db.collection(app.globalData.dynasty).get({
 
       //如果查询成功的话    
@@ -36,7 +36,6 @@ Page({
         this.setData({
           ne: res.data
         })
-        console.log(res.data)
       }
     })
 
@@ -57,7 +56,6 @@ Page({
       imgname:getApp().globalData.name
     })
     var classi = this.data.classi
-    console.log(classi)
     if(classi==0){
       db.collection(app.globalData.dynasty).get({
 
@@ -140,7 +138,6 @@ Page({
     })
     var classic = this.data.classi
     var x = this.data.ne.length
-    console.log(x)
     var old_data = this.data.ne
     if(classic == 0){
       db.collection(app.globalData.dynasty).skip(x).get({
@@ -186,7 +183,6 @@ Page({
       })
     }
     
-    console.log('circle 下一页');
   
   },
 
@@ -201,8 +197,6 @@ Page({
   },
 
   click: function (option) {
-    console.log(option)
-    var cn = option.currentTarget.dataset.cn
     wx.navigateTo({
       url: '/pages/detail/detail?cn=' + option.currentTarget.dataset.cn,
     })

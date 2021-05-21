@@ -9,8 +9,6 @@ page{
   text-indent: 25rpx;
   margin-top: 30rpx;
   margin-bottom: 20rpx;
-  display: flex;
-  align-items: center;
   font-size: 50rpx;
   font-weight:bold;
   height: 8%;
@@ -42,8 +40,6 @@ page{
   letter-spacing: 3rpx;
 }
 
-
-
 .t1{
     text-indent: 15rpx;
     font-size: 35rpx;
@@ -72,8 +68,6 @@ page{
   margin-top: 20rpx;
   margin-left: 56rpx;
   font-size: 26rpx;
-  /* letter-spacing: 3rpx; */
-  /* text-decoration: underline; */
   margin-bottom: 40rpx;
 }
 

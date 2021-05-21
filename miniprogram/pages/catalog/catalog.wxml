@@ -16,6 +16,7 @@
 </view>
 
 <view class="city_name">
+<block wx:if="{{ne.length>0}}">
 <view  wx:for="{{ne}}" class="itembox" bindtap="click" data-cn="{{item.old}}" ><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
     
     <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
@@ -23,4 +24,8 @@
     <image wx:else src="cloud://cloud1-2gb0zw2n446b1f4a.636c-cloud1-2gb0zw2n446b1f4a-1305567814/p/{{imgname}}.png" class="item-img"></image>
     <view   class="sty">{{item.old}}</view>
 </view>
+</block>
+<block wx:else>
+    <view class="tiaomu2">该分类下暂无内容</view>
+</block>
 </view>

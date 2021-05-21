@@ -85,14 +85,6 @@ page{
   max-height: 240rpx;
   overflow: auto;
 }
-@keyframes myfirst{
-  from{
-    height: 0rpx;
-  }
-  to{
-    height: 120rpx;
-  }
-}
 
 .select_one{
   height: 65rpx;
@@ -144,3 +136,11 @@ page{
   height: 300rpx;
 }
 
+.tiaomu2{
+  font-size:36rpx;
+  width: 80%;
+  margin:20rpx auto;
+  z-index:10;
+  text-align: center;
+  color:grey;
+}

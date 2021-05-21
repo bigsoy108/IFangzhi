@@ -21,7 +21,6 @@ Page({
     this.setData({
       kw:options.kw
     })
-    console.log(this.data.kw)
 
     db.collection(app.globalData.dynasty).where(_.or([
       {
@@ -38,7 +37,7 @@ Page({
       }
     ])).get({
       success:res=>{
-        console.log(res)
+        
         this.setData({
           results:res.data
         })
@@ -72,14 +71,14 @@ Page({
       }
     ])).get({
       success:res=>{
-        console.log(res)
+        
         this.setData({
           results:res.data
         })
       }
     })
     this.selectComponent('#sec').setData({
-      nowText:getApp().globalData.name
+      nowText:app.globalData.name
     })
   },
 
@@ -114,7 +113,6 @@ Page({
     })
     
     var x = this.data.results.length
-    console.log(x)
     var old_data = this.data.results
     db.collection(app.globalData.dynasty).where(_.or([
       {
@@ -131,13 +129,11 @@ Page({
       }
     ])).skip(x).get({
       success:res=>{
-        console.log(res)
         this.setData({
           results: old_data.concat(res.data),
         })
       }
     })
-    console.log('circle 下一页');
   
   },
 
@@ -149,8 +145,6 @@ Page({
   },
 
   click: function (option) {
-    console.log(option)
-    var cn = option.currentTarget.dataset.cn
     wx.navigateTo({
       url: '/pages/detail/detail?cn=' + option.currentTarget.dataset.cn,
     })
@@ -194,12 +188,12 @@ Page({
 
       setTimeout(function () {
         wx.hideLoading()
-      }, 2000)      
+      }, 1000)      
       }else{
           wx.showToast({
             title: '输入不能为空',
             icon: 'none',
-            duration: 2000
+            duration: 1000
         }) 
       }
     

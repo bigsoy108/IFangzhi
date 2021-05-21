@@ -14,14 +14,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      kw:options.kw
-    })
-    console.log(this.data.kw)
 
     db.collection("kaifa").where(_).get({
       success:res=>{
-        console.log(res)
         this.setData({
           results:res.data
         })

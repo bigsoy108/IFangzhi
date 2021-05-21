@@ -27,8 +27,7 @@ Page({
     }).count({
       success: function(res) {
         _this.mapSet(res.total)
-      },
-      fail: console.error
+      }
     })
 
 
@@ -66,8 +65,7 @@ Page({
     }).count({
       success: function(res) {
         _this.mapSet(res.total)
-      },
-      fail: console.error
+      }
     })
     this.selectComponent('#sec').setData({
       nowText:app.globalData.name
@@ -117,18 +115,12 @@ Page({
   },
 
   mapSet(e){
-    // wx.showLoading({
-    //   title: '刷新中',
-    //   duration: 1000
-    // })
-    console.log(e)
     var times = Math.ceil(e/20)
     var addResults = []
     var market_id = 0
     for(var tt =0;tt<times;tt++){
       db.collection(app.globalData.dynasty).skip(20*tt).get({
         success:res=>{
-          console.log(res)
           for(var index in res.data){
             if(res.data[index].location){
               var ii =  {
@@ -164,7 +156,6 @@ Page({
         }
       })
     }
-    console.log(this.data.markers)
   },
   refresh(){
     this.onShow()

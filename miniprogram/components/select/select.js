@@ -23,7 +23,6 @@ Component({
     methods: {
 　　　//option的显示与否
         selectToggle:function(){
-            console.log(this.data)
             this.setData({
                 propArray:app.globalData.selectArray
              })
@@ -50,7 +49,6 @@ Component({
         },
         //设置内容
         setText:function(e){
-            console.log(this.properties.propArray)
             var nowData = this.properties.propArray;//当前option的数据是引入组件的页面传过来的，所以这里获取数据只有通过this.properties
             var nowIdx = e.target.dataset.index;//当前点击的索引
             var nowText = nowData[nowIdx].text;//当前点击的内容
@@ -65,7 +63,6 @@ Component({
             var app = getApp()
             app.globalData.dynasty = nowTarget
             app.globalData.name = nowText
-            console.log(app.globalData.dynasty)
             this.triggerEvent('re')
         }
     }
