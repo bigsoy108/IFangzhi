@@ -33,11 +33,12 @@ page{
 
 
 .text{
-  margin-top: 20rpx;
   text-indent: 56rpx;
   font-size: 28rpx;
   margin-bottom: 55rpx;
   letter-spacing: 3rpx;
+  margin:20rpx 10rpx;
+  white-space: pre-wrap;
 }
 
 .t1{
