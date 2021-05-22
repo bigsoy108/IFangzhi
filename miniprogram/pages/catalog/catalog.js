@@ -3,6 +3,7 @@
 const db = wx.cloud.database();
 const app = getApp()
 var classi = 0
+var dy = ""
 
 Page({
 
@@ -25,9 +26,10 @@ Page({
     this.setData({
       imgname:getApp().globalData.name
     })
+    dy = getApp().globalData.dynasty
 
     //开始查询数据了 
-    db.collection(app.globalData.dynasty).get({
+    db.collection(dy).get({
 
       //如果查询成功的话    
       success: res => {
@@ -52,11 +54,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
+    if(dy!=getApp().globalData.dynasty)
+    {this.setData({
       imgname:getApp().globalData.name
     })
+    dy = getApp().globalData.dynasty
     if(classi==0){
-      db.collection(app.globalData.dynasty).get({
+      db.collection(dy).get({
 
         //如果查询成功的话    
         success: res => {
@@ -69,7 +73,7 @@ Page({
       })
     }
   if(classi==1){
-    db.collection(app.globalData.dynasty).where({
+    db.collection(dy).where({
       level: 1
     }).get({
 
@@ -85,7 +89,7 @@ Page({
       
     }
     if(classi==2){
-      db.collection(app.globalData.dynasty).where({
+      db.collection(dy).where({
         level: 2
       }).get({
 
@@ -99,6 +103,7 @@ Page({
         }
       })
 
+    }
     }
     
     this.selectComponent('#sec').setData({

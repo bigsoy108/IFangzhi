@@ -3,6 +3,7 @@
 const db = wx.cloud.database()
 const _ = db.command
 const app = getApp()
+var dy = ""
 
 Page({
 
@@ -30,8 +31,9 @@ Page({
     this.setData({
       kw:options.kw
     })
+    dy = app.globalData.dynasty
 
-    db.collection(app.globalData.dynasty).where(_.or([
+    db.collection(dy).where(_.or([
       {
         now:({
           $regex:'.*' + this.data.kw + '.*',
@@ -65,7 +67,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    db.collection(app.globalData.dynasty).where(_.or([
+    if(dy!=app.globalData.dynasty){
+      dy = app.globalData.dynasty
+    db.collection(dy).where(_.or([
       {
         now:({
           $regex:'.*' + this.data.kw + '.*',
@@ -86,9 +90,11 @@ Page({
         })
       }
     })
+  }
     this.selectComponent('#sec').setData({
       nowText:app.globalData.name
     })
+
   },
 
   /**
