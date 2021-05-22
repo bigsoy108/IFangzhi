@@ -141,7 +141,7 @@ page{
   font-size:36rpx;
   width: 80%;
   margin:20rpx auto;
-  z-index:10;
+  z-index:-1;
   text-align: center;
   color:grey;
 }
