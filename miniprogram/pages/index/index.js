@@ -97,16 +97,7 @@ Page({
         wx.navigateTo({
           url: '/pages/results/results?kw='+this.data.keyword
         })
-    
-        //显示搜索中的提示
-        wx.showLoading({
-          title: '搜索中',
-          icon: 'loading'
-        })
-  
-        setTimeout(function () {
-          wx.hideLoading()
-        }, 2000)      
+        
         }else{
             wx.showToast({
               title: '输入不能为空',

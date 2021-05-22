@@ -18,6 +18,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+            //显示搜索中的提示
+            wx.showLoading({
+              title: '搜索中',
+              icon: 'loading'
+            })
+      
+            setTimeout(function () {
+              wx.hideLoading()
+            }, 1000)  
     this.setData({
       kw:options.kw
     })
@@ -107,10 +116,14 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    wx.showLoading({
-      title: '刷新中',
-      duration: 1000
-    })
+      //显示搜索中的提示
+      wx.showLoading({
+        title: '加载中',
+        icon: 'loading'
+      })
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 1000)  
     
     var x = this.data.results.length
     var old_data = this.data.results
@@ -175,9 +188,7 @@ Page({
 
     if(this.data.kw) {  
         
-      wx.redirectTo({
-        url: '/pages/results/results?kw='+this.data.kw
-      })
+      this.onShow()
   
       //显示搜索中的提示
       wx.showLoading({
@@ -187,7 +198,7 @@ Page({
 
       setTimeout(function () {
         wx.hideLoading()
-      }, 2000)      
+      }, 1000)      
       }else{
           wx.showToast({
             title: '输入不能为空',
