@@ -193,6 +193,8 @@ Page({
     })
 
     if(this.data.kw) {  
+
+      dy = ""
         
       this.onShow()
   

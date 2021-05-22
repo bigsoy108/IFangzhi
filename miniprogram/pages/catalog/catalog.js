@@ -234,7 +234,51 @@ Page({
       select:false,
       animationData: animation.export(),
     })
-    this.onShow()
+    if(classi==0){
+      db.collection(dy).get({
+
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: res.data
+          })
+        }
+      })
+    }
+  if(classi==1){
+    db.collection(dy).where({
+      level: 1
+    }).get({
+
+      //如果查询成功的话    
+      success: res => {
+
+        //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+        this.setData({
+          ne: res.data
+        })
+      }
+    })
+      
+    }
+    if(classi==2){
+      db.collection(dy).where({
+        level: 2
+      }).get({
+
+        //如果查询成功的话    
+        success: res => {
+  
+          //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值      
+          this.setData({
+            ne: res.data
+          })
+        }
+      })
+
+    }
 
   }
 
