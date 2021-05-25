@@ -3,6 +3,7 @@
 const db = wx.cloud.database();
 const _ = db.command
 const app = getApp()
+var dy = ""
 
 Page({
 
@@ -21,6 +22,7 @@ Page({
    */
   onLoad(options){
     let _this =this
+    dy = app.globalData.dynasty
 
     db.collection(app.globalData.dynasty).where({
       level:_.gt(0)
@@ -60,6 +62,9 @@ Page({
   onShow: function () {
     let _this =this
 
+    if(dy!=app.globalData.dynasty)
+{
+  dy = app.globalData.dynasty
     db.collection(app.globalData.dynasty).where({
       level:_.gt(0)
     }).count({
@@ -67,6 +72,7 @@ Page({
         _this.mapSet(res.total)
       }
     })
+  }
     this.selectComponent('#sec').setData({
       nowText:app.globalData.name
     })
